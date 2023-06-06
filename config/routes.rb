@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
-  get 'prompts/create'
-  get 'activities/create'
-  get 'entries/new'
-  get 'entries/create'
-  get 'entries/option'
-  get 'entries/show'
-  get 'moods/create'
-  devise_for :users
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
   # Defines the root path route ("/")
-  # root "articles#index"
+  # root "pages#home"
+
+  resources :entries, only: %i[new show create]
+  resources :moods, only: %i[create]
+
+  get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
+  get 'entries/option', to: 'entries#option', as: 'entry_option'
 end
