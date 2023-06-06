@@ -5,3 +5,4 @@ class Entry < ApplicationRecord
   has_many :activities, through: :entry_activities
   enum type: %i[morning daily weekly monthly]
 end
+
