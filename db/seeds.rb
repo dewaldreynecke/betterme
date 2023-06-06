@@ -49,3 +49,9 @@ Activity.create!(name: 'Good sleep')
 Activity.create!(name: 'Socialising')
 puts "...done. #{Activity.all.count} activities created."
 puts ''
+
+puts 'Creating 2 entries...'
+Entry.create(user_id: User.last.id, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
+Entry.create(user_id: User.last.id, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
+puts "#{Entry.all.count} entries created."
+puts ''
