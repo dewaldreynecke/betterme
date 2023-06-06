@@ -1,0 +1,33 @@
+<%# render the navbar here %>
+<div class="container">
+  <div class="inputs">
+    <% @prompts.each do |prompt| %>
+      <div class="prompt">
+        <h2><%= prompt.content %></h2>
+        <%# put the input form for the prompt here %>
+        <p>input box for entry_prompts.content will go here</p>
+      </div>
+    <% end %>
+    <div class="prompt">
+      <h2>What else is on your mind?</h2>
+      <p>input box for entry.content</p>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="links">
+      <p>Cloudinary photo add form goes here</p>
+      <p>location adding form goes here</p>
+      <h2>Activities</h2>
+      <div class="activities-cloud">
+        <p>activities cloud goes here, use CSS grid to lay them out</p>
+        <% @activities.each do |activity| %>
+          <p><%= activity.name %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="map">
+      <p>mapbox map goes here</p>
+    </div>
+  </div>
+  <p>Submit button goes here.</p>
+</div>
