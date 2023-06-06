@@ -1,0 +1,16 @@
+<h1>Journal Entries</h1>
+
+<% @entries_on_same_date.each do |entry| %>
+  <div>
+    <h3><%= entry.created_at.strftime("%B %d, %Y") %></h3>
+    <p><%= entry.content %></p>
+
+    <% if entry.photo.any? %>
+      <% entry.photo.each do |picture| %>
+        <img src="<%= photo.url %>">
+      <% end %>
+    <% else %>
+      <p>No pictures uploaded for this entry.</p>
+    <% end %>
+  </div>
+<% end %>
