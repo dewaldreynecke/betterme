@@ -1,5 +1,11 @@
 class EntriesController < ApplicationController
-  def new
+  def newguided
+    @entry = Entry.new
+    @prompts = Prompt.all
+    @activities = Activity.all
+  end
+
+  def newfree
   end
 
   def create
