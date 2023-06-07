@@ -61,6 +61,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 # -------------------------- ADDED BY BETTERME TEAM ----------------------------
 gem "cloudinary"
 gem "simple_calendar", "~> 2.4"
+gem "geocoder"
 # ------------------------------------------------------------------------------
 
 group :development, :test do
