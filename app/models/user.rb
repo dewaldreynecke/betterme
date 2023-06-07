@@ -6,6 +6,4 @@ class User < ApplicationRecord
 
   has_many :entries
   has_many :moods
-  has_many :activities
-  has_many :contacts
 end
