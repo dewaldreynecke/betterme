@@ -20,5 +20,6 @@ export default class extends Controller {
     this.editTarget.classList.remove("d-none")
     this.formTarget.classList.add("d-none")
     this.checkTarget.classList.add("d-none")
+    this.headingTarget.innerText = this.formTarget.value
   }
 }
