@@ -1,14 +1,16 @@
 class EntriesController < ApplicationController
-  def newguided
+  def new
     @entry = Entry.new
-    @prompts = Prompt.all
-    @activities = Activity.all
-  end
-
-  def newfree
   end
 
   def create
+    @entry = Entry.new(entry_params)
+    @entry.user = current_user
+    if @entry.save
+      redirect_to dashboard_path
+    else
+      render self, status: :unprocessable_entity
+    end
   end
 
   def option
