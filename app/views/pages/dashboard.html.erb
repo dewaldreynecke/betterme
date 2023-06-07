@@ -20,7 +20,11 @@
   </div>
 
   <div class="d-flex justify-content-between mt-4">
-    <h2 class="card">Calendar</h2>
+    <div class="container">
+      <%= month_calendar do |date| %>
+        <%= date.day %>
+      <% end %>
+    </div>
 
     <h2 class="card">Map</h2>
   </div>
