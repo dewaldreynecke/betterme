@@ -6,7 +6,11 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
     @entry.user = current_user
-    @entry.save!
+    if @entry.save
+      redirect_to dashboard_path
+    else
+      render self, status: :unprocessable_entity
+    end
   end
 
   def option
