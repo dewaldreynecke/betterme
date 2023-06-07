@@ -2,11 +2,14 @@
 
 <div class="container mt-4">
   <%= simple_form_for(@entry) do |f| %>
-    <div class="d-flex">
-      <h4 class="me-3">My journal entry</h4><p><i class="fa-solid fa-pen"></i></p>
+    <div class="d-flex" data-controller="edit-title">
+      <h4 class="me-3" data-edit-title-target="heading">My journal entry</h4>
       <%= f.input :title,
                   label:false,
-                  input_html: { class: "d-none" } %>
+                  input_html: { class: "d-none" },
+                  data: {edit_title_target: "form" } %>
+      <p data-edit-title-target="edit"><i class="fa-solid fa-pen"></i></p>
+      <p class="d-none" data-edit-title-target="check"><i class="fa-solid fa-check"></i></p>
     </div>
     <div class="d-flex mt-4 w-100">
       <%= f.input :content,
