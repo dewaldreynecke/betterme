@@ -4,6 +4,9 @@ class EntriesController < ApplicationController
   end
 
   def create
+    @entry = Entry.new(entry_params)
+    @entry.user = current_user
+    @entry.save!
   end
 
   def option
