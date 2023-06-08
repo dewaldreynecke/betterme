@@ -16,5 +16,10 @@ application.register("hello", HelloController)
 import InspirationController from "./inspiration_controller"
 application.register("inspiration", InspirationController)
 
+
+import MapController from "./map_controller"
+application.register("map", MapController)
+
 import ThemeController from "./theme_controller"
 application.register("theme", ThemeController)
+

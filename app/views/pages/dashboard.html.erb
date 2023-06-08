@@ -4,12 +4,11 @@
 <div class="container mt-4">
 
   <div class="d-flex justify-content-between">
-    <div class="card">
-      <h3>How are you feeling today?</h3>
-      <p>Mood pills</p>
+    <div class="moodcard">
+      <%= render "mood" %>
     </div>
 
-    <div class="btn btn-ghost">
+    <div class="entrycard">
       <%= link_to "Make a new entry", new_entry_path %>
     </div>
   </div>
@@ -26,8 +25,14 @@
       <% end %>
     </div>
 
-    <h2 class="card">Map</h2>
+  <div style="width:800px; height:467px"
+    data-controller="map"
+    id="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
+</div>
 
   <div class="d-flex justify-content-evenly mt-4">
     <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
