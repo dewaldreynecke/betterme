@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="inspiration"
 export default class extends Controller {
-  static targets = ["text"]
+  static targets = ["message"]
 
   connect() {
     console.log("inspiration controller is connected");
@@ -11,6 +11,12 @@ export default class extends Controller {
   cycle() {
     console.log("inspiration button was clicked");
     // do AJAX to fetch new text
-    // replace the text in textTarget
+    const url = 'http://localhost:3000/inspirations/random'
+    fetch(url, {headers: {"Accept": "text/plain"}})
+    .then(response => response.text())
+    .then((data) => {
+      // replace the text in textTarget
+      this.messageTarget.innerText = data
+    })
   }
 }
