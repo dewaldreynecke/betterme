@@ -17,6 +17,7 @@ class EntriesController < ApplicationController
   end
 
   def show_by_date
+    @entry = Entry.new(entry_params)
     @entries_on_same_date = Entry.where(created_at: params[:date].to_date.beginning_of_day..params[:date].to_date.end_of_day)
   end
 

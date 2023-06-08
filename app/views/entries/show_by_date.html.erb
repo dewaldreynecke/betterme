@@ -1,16 +1,24 @@
+<div class="banner d-flex align-items-center justify-content-center mb-3" style="background-color: #FFF8DD">
+  <div class="container m-5">
+    <div class="text-center">
+      <h1 class="pb-2">My Journal entries</h1>
+      <% if @entries_on_same_date.any? %>
+          <h3><%= @entries_on_same_date.first.created_at.strftime("%B %d, %Y") %></h3>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 <div class="container">
 
 
-
-  <h1>My Journal entries</h1>
   <div class="row">
     <% @entries_on_same_date.each do |entry| %>
       <div class="col-lg-6">
-        <div class="card">
+        <div class="card mb-3">
           <div class="card-body">
-            <h3><%= entry.created_at.strftime("%B %d, %Y") %></h3>
+            <h3><%= entry.title %></h3>
             <p><%= entry.content %></p>
           </div>
         </div>
@@ -18,18 +26,14 @@
     <% end %>
   </div>
 
-  <hr>
+  <% @entry.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
+  <hr>
   <a href="#" class="btn btn-primary btn-sm">Family Time</a>
   <a href="#" class="btn btn-primary btn-sm">Vacation</a>
   <a href="#" class="btn btn-primary btn-sm">Alcohol</a>
-
   <hr>
-
-<% if @entries_on_same_date.any? %>
-  <div class="jumbotron bg-primary text-white">
-    <h3><%= @entries_on_same_date.first.created_at.strftime("%B %d, %Y") %></h3>
-  </div>
-<% end %>
 
 </div>

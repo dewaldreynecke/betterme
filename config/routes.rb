@@ -4,17 +4,8 @@ Rails.application.routes.draw do
   root "pages#home"
 
   get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
-<<<<<<< HEAD
-  get 'entries/option', to: 'entries#option', as: 'entry_option'
-  get 'entries/newguided', to: 'entries#newguided', as: 'new_entry_guided'
-  get 'entries/newfree', to: 'entries#newfree', as: 'new_entry_free'
-  get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 
-  resources :entries, only: %i[create]
-  resources :moods, only: %i[create]
-=======
-
-  resources :entries, only: %i[new show create]
+  resources :entries, only: %i[new create]
   resources :moods, only: [:update]
->>>>>>> origin
+  get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 end
