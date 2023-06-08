@@ -1,69 +1,84 @@
-<div>
-  <h1>Date</h1>
-  <p>I will be more present and kind -edit button-</p>
-</div>
+<%= render "banner" %>
 
 
-<div class="container">
+<div class="container mt-4">
 
   <div class="d-flex justify-content-between">
-    <div>
+    <div class="card">
       <h3>How are you feeling today?</h3>
       <p>Mood pills</p>
     </div>
 
-    <div>
-      <h3>Make an entry Link</h3>
+    <div class="card">
+      <h3 class="text-center">Make an entry Link</h3>
     </div>
   </div>
 
-  <div class="card">
-    <h2>Mood history over time</h2>
+  <div class="card mt-4">
+    <h2>Mood over time</h2>
     <p>Line graph</p>
   </div>
 
-  <div class="d-flex justify-content-between">
-    <h2 class="card">Calendar</h2>
+  <div class="d-flex justify-content-between mt-4">
+    <div class="container">
+      <%= month_calendar do |date| %>
+        <%= date.day %>
+      <% end %>
+    </div>
 
     <h2 class="card">Map</h2>
   </div>
 
-  <div class="d-flex justify-content-evenly">
-    <div class="card">
-      <h2>10 July 2023</h2>
-      <p>Holiday  Exercise  Family</p>
-      <p>Stellenbosch, South Africa</p>
-      <p>Entry Title</p>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur a, odio ullam officia, repellendus sapiente, eligendi illo modi ipsum quia esse nam incidunt optio quo. Architecto molestias error consequatur.</p>
-      <p>Entry Title</p>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur a, odio ullam officia, repellendus sapiente, eligendi illo modi ipsum quia esse nam incidunt optio quo. Architecto molestias error consequatur.</p>
+  <div class="d-flex justify-content-evenly mt-4">
+    <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h3 mb-3>10 July 2023</h3>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Holiday</p>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Exercise</p>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Family</p>
+        <p> <strong>Stellenbosch, South Africa </strong></p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><strong><u>Morning Gratitude</u></strong></h5>
+        <p class="card-text">Today, I am grateful for the warmth of the morning sun, gently caressing my face and filling me with a sense of renewed energy...</p>
+        <hr>
+        <h5 class="card-title"><u>Feeling Frustrated</u></h5>
+        <p class="card-text">Work frustrations arise today, testing my patience. I embrace the challenge, knowing it holds opportunities for growth and the chance to emerge stronger and wiser....</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>10 July 2023</h2>
-      <p>Holiday  Exercise  Family</p>
-      <p>Stellenbosch, South Africa</p>
-      <p>Entry Title</p>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur a, odio ullam officia, repellendus sapiente, eligendi illo modi ipsum quia esse nam incidunt optio quo. Architecto molestias error consequatur.</p>
-      <p>Entry Title</p>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur a, odio ullam officia, repellendus sapiente, eligendi illo modi ipsum quia esse nam incidunt optio quo. Architecto molestias error consequatur.</p>
+    <div class="card text-dark bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h3>10 July 2023</h3>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Holiday</p>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Exercise</p>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Family</p>
+        <p>Stellenbosch, South Africa</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><u>Morning Gratitude</u></h5>
+        <p class="card-text">Today, I am grateful for the warmth of the morning sun, gently caressing my face and filling me with a sense of renewed energy...</p>
+        <hr>
+        <h5 class="card-title"><u>Feeling Frustrated</u></h5>
+        <p class="card-text">Work frustrations arise today, testing my patience. I embrace the challenge, knowing it holds opportunities for growth and the chance to emerge stronger and wiser....</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>10 July 2023</h2>
-      <p>Holiday  Exercise  Family</p>
-      <p>Stellenbosch, South Africa</p>
-      <p>Entry Title</p>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur a, odio ullam officia, repellendus sapiente, eligendi illo modi ipsum quia esse nam incidunt optio quo. Architecto molestias error consequatur.</p>
-      <p>Entry Title</p>
-      <hr>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur a, odio ullam officia, repellendus sapiente, eligendi illo modi ipsum quia esse nam incidunt optio quo. Architecto molestias error consequatur.</p>
+    <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h3>10 July 2023</h3>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Holiday</p>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Exercise</p>
+        <p class="card rounded-pill d-inline-block px-2 text-center">Family</p>
+        <p>Stellenbosch, South Africa</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><u>Morning Gratitude</u></h5>
+        <p class="card-text">Today, I am grateful for the warmth of the morning sun, gently caressing my face and filling me with a sense of renewed energy...</p>
+        <hr>
+        <h5 class="card-title"><u>Feeling Frustrated</u></h5>
+        <p class="card-text">Work frustrations arise today, testing my patience. I embrace the challenge, knowing it holds opportunities for growth and the chance to emerge stronger and wiser....</p>
+      </div>
     </div>
   </div>
-
 </div>

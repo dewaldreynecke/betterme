@@ -8,16 +8,14 @@
 
 puts 'Starting seeding process.'
 puts 'Clearing existing entries from database.'
-Activity.destroy_all
-puts 'Activities removed.'
-Prompt.destroy_all
-puts 'Prompts removed.'
-Contact.destroy_all
-puts 'Contacts removed.'
 Entry.destroy_all
 puts 'Entries removed.'
 User.destroy_all
 puts 'Users removed.'
+Inspiration.destroy_all
+puts 'Inspirations removed.'
+Mood.destroy_all
+puts 'Moods removed.'
 puts ''
 
 puts 'Creating user...'
@@ -27,31 +25,15 @@ puts 'Demo user has email: me@me.com'
 puts 'Demo user has password: 123456'
 puts ''
 
-puts 'Creating three prompts...'
-Prompt.create(content: 'What are you grateful for?')
-Prompt.create(content: 'What are your priorities?')
-Prompt.create(content: 'What would you like to improve about yourself?')
-puts "...done. #{Prompt.all.count} prompts created."
-puts ''
-
-puts 'Creating Activities...'
-Activity.create!(name: 'Holiday')
-Activity.create!(name: 'Exercise')
-Activity.create!(name: 'Good food day')
-Activity.create!(name: 'Sex')
-Activity.create!(name: 'Medical')
-Activity.create!(name: 'Alcohol')
-Activity.create!(name: 'Work')
-Activity.create!(name: 'Other drugs')
-Activity.create!(name: 'Family')
-Activity.create!(name: 'Home')
-Activity.create!(name: 'Good sleep')
-Activity.create!(name: 'Socialising')
-puts "...done. #{Activity.all.count} activities created."
+puts 'Creating three inspirations...'
+Inspiration.create(text: 'What are you grateful for?')
+Inspiration.create(text: 'What are your priorities?')
+Inspiration.create(text: 'What would you like to improve about yourself?')
+puts "...done. #{Inspiration.all.count} inspirations created."
 puts ''
 
 puts 'Creating 2 entries...'
-Entry.create(user_id: User.last.id, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
-Entry.create(user_id: User.last.id, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
+Entry.create(user_id: User.last.id, title: 'Gratitude', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
+Entry.create(user_id: User.last.id, title: 'What a silly day', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
 puts "#{Entry.all.count} entries created."
 puts ''

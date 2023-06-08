@@ -1,0 +1,43 @@
+.simple-calendar {
+
+  table {
+    border-collapse: collapse;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px #666; /* this draws the table border  */
+}
+
+  td {
+    border: none;
+  }
+
+  .day {
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background-color: #9CA891;
+    border-radius: 30px;
+  }
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+    color: black;
+  }
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
+}
