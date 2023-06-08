@@ -7,7 +7,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.user = current_user
     if @entry.save
-      redirect_to dashboard_path
+      redirect_to entries_by_date_path(@entry.created_at.to_date)
     else
       render dashboard_path, status: :unprocessable_entity
     end
@@ -16,8 +16,8 @@ class EntriesController < ApplicationController
   def option
   end
 
-  def show
-    @entry = Entry.find(params[:id])
+  def show_by_date
+    @entries_on_same_date = Entry.where(created_at: params[:date].to_date.beginning_of_day..params[:date].to_date.end_of_day)
   end
 
   private
