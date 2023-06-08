@@ -1,10 +1,11 @@
 <div class="banner d-flex align-items-center justify-content-center mb-3" style="background-color: #fff5bf">
   <div class="container m-5">
     <h3><strong>06 June 2023</strong></h3>
-    <div class="text-center">
-
-      <h1 class="pb-2"><ul>I will be more present and kind</ul></h1>
-      <%# <button class="btn btn-sm btn-outline-dark">Edit</button> %>
+    <div class="d-flex text-center" data-controller="theme">
+      <h1 class="pb-2" data-theme-target="themeheader"><ul>I will be more present and kind</ul></h1>
+      <input type="text" name="themetext" id="themetext" data-theme-target="themeinput">
+      <p data-theme-target="editbutton" data-action="click->theme#displayForm"><i class="fa-solid fa-pen"></i></p>
+      <p class="" data-theme-target="checkbutton" data-action="click->theme#hideForm"><i class="fa-solid fa-check"></i></p>
     </div>
   </div>
 </div>
