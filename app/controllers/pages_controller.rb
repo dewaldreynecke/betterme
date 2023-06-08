@@ -9,5 +9,6 @@ class PagesController < ApplicationController
   end
 
   def confirmation
+    @zenquote = Zenquote.all.sample
   end
 end
