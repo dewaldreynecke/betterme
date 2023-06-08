@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user/update'
   get 'inspirations/random'
   devise_for :users
   # Defines the root path route ("/")
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :entries, only: %i[new show create]
   resources :moods, only: [:update]
+  resources :user, only: [:update]
 end
