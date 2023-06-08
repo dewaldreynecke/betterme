@@ -22,7 +22,7 @@ puts 'Demo user has email: me@me.com'
 puts 'Demo user has password: 123456'
 puts ''
 
-puts 'Creating 2 entries...'
+puts 'Creating 28 entries...'
 
 entry = Entry.new(user_id: User.last.id,
   title: "Creating Memories with Loved Ones",
@@ -161,14 +161,14 @@ entry = Entry.new(user_id: User.last.id,
   title: "A Day of Triumph and Success",
   content: "Today, on June 8th, was a day filled with triumph and success. I accomplished a major goal that I've been working towards for months, and the feeling of achievement is overwhelming. The sense of fulfillment and pride in my abilities is simply awesome."
 )
-entry.date = Date.new(2023,06,08)
+entry.date = Date.new(2023,06,10)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
   title: "Blissful Moments of Pure Joy",
   content: "On June 9th, today, I experienced moments of pure joy that warmed my heart and brought a smile to my face. Whether it was spending time with loved ones, engaging in my favorite hobbies, or witnessing a beautiful sunset, every moment was infused with happiness."
 )
-entry.date = Date.new(2023,06,09)
+entry.date = Date.new(2023,06,10)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
