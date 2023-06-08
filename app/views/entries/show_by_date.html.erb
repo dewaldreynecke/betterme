@@ -26,9 +26,6 @@
     <% end %>
   </div>
 
-  <% @entry.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
 
   <hr>
   <a href="#" class="btn btn-primary btn-sm">Family Time</a>
