@@ -12,3 +12,6 @@ application.register("edit-title", EditTitleController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import InspirationController from "./inspiration_controller"
+application.register("inspiration", InspirationController)
