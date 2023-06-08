@@ -4,6 +4,8 @@
       <h1 class="pb-2">My Journal Entries</h1>
       <% if @entries_on_same_date.any? %>
           <h3><%= @entries_on_same_date.first.created_at.strftime("%B %d, %Y") %></h3>
+          <%= link_to('Next day', entries_by_date_path(date: @date.next.strftime("%Y-%m-%d"))) %>
+          <%= link_to('Previous day', entries_by_date_path(date: @date.prev_day)) %>
       <% end %>
     </div>
   </div>

@@ -17,7 +17,10 @@ class EntriesController < ApplicationController
   end
 
   def show_by_date
-    @entries_on_same_date = Entry.where(created_at: params[:date].to_date.beginning_of_day..params[:date].to_date.end_of_day)
+    @date = Date.parse(params[:date])
+    @showdate = Date.new(2023,06,08)
+    @entries_on_same_date = Entry.where(created_at: params[:date])
+    raise
   end
 
   private
@@ -26,3 +29,5 @@ class EntriesController < ApplicationController
     params.require(:entry).permit(:title, :content, :address, photos: [])
   end
 end
+
+# to_date.beginning_of_day..params[:date].to_date.end_of_day
