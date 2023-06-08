@@ -1,8 +1,8 @@
-<div style="background-color: #fff5bf">
-  <div>
-    <h1>Your journal entry has been saved.</h1>
+<div class="confirmbox">
+  <div class="confirmbody">
+    <h1 class="mb-5">Your journal entry has been saved.</h1>
     <p><%= @zenquote.quote %></p>
-    <p>&mdash;<%= @zenquote.author %></p>
-    <button class="btn btn-primary">Return to Home Page</button>
+    <p>&mdash;<em><%= @zenquote.author %></em></p>
+    <%= link_to "Return to Home page", dashboard_path, class: "btn btn-primary mt-4" %>
   </div>
 </div>
