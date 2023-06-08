@@ -1,10 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require "json"
+require "open-uri"
 
 puts 'Starting seeding process.'
 puts 'Clearing existing entries from database.'
@@ -16,6 +11,8 @@ Inspiration.destroy_all
 puts 'Inspirations removed.'
 Mood.destroy_all
 puts 'Moods removed.'
+Zenquote.destroy_all
+puts 'Zenquotes removed.'
 puts ''
 
 puts 'Creating user...'
@@ -36,4 +33,22 @@ puts 'Creating 2 entries...'
 Entry.create(user_id: User.last.id, title: 'Gratitude', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
 Entry.create(user_id: User.last.id, title: 'What a silly day', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius ex sit amet nibh tempus, sed laoreet felis rutrum. Morbi sed massa varius, fermentum massa")
 puts "#{Entry.all.count} entries created."
+puts ''
+
+puts 'Creating Zen Quotes... (this will take about a minute)'
+url = "https://zenquotes.io/api/quotes"
+quotes_serialized = URI.open(url).read
+quotes = JSON.parse(quotes_serialized)
+puts 'First 50 quotes fetched from API'
+quotes.each { |quote| Zenquote.create(quote: quote["q"], author: quote["a"]) }
+puts 'First 50 quotes saved to database. Fetching 50 more.'
+puts 'Waiting for API rate limit to timeout.'
+sleep(31)
+puts 'Fetching 50 more quotes.'
+quotes_serialized = URI.open(url).read
+quotes = JSON.parse(quotes_serialized)
+puts 'Another 50 quotes fetched from API'
+quotes.each { |quote| Zenquote.create(quote: quote["q"], author: quote["a"]) }
+puts '50 quotes saved to database.'
+puts "#{Zenquote.all.count} Zenquotes added to database."
 puts ''

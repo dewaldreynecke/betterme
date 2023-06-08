@@ -14,4 +14,8 @@ class PagesController < ApplicationController
     }
     end
   end
+
+  def confirmation
+    @zenquote = Zenquote.all.sample
+  end
 end
