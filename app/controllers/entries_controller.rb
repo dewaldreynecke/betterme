@@ -9,7 +9,7 @@ class EntriesController < ApplicationController
     if @entry.save
       redirect_to dashboard_path
     else
-      render self, status: :unprocessable_entity
+      render dashboard_path, status: :unprocessable_entity
     end
   end
 
