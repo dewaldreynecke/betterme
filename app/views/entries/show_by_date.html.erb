@@ -3,24 +3,35 @@
     <div class="text-center">
       <h1 class="pb-2">My Journal Entries</h1>
       <% if @entries_on_same_date.any? %>
-          <h3><%= @entries_on_same_date.first.created_at.strftime("%B %d, %Y") %></h3>
-          <%= link_to('Next day', entries_by_date_path(date: @date.next.strftime("%Y-%m-%d"))) %>
-          <%= link_to('Previous day', entries_by_date_path(date: @date.prev_day)) %>
+          <h3><%= @entries_on_same_date.first.date.strftime("%B %d, %Y") %></h3>
       <% end %>
-    </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-start">
+          <% if @previous_entry %>
+            <%= link_to entries_by_date_path(date: @previous_entry.date) do %>
+              <i class="fas fa-arrow-left"></i> Previous Entry
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-md-6 text-end">
+          <% if @next_entry %>
+            <%= link_to entries_by_date_path(date: @next_entry.date) do %>
+              Next Entry <i class="fas fa-arrow-right"></i>
+             <% end %>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
 
-
 <div class="container">
-
-
   <div class="row">
     <% @entries_on_same_date.each do |entry| %>
       <div class="col-lg-6 h-100">
         <div class="card mb-3">
           <div class="card-body">
-            <h3><%= entry.title %></h3><h6><%= entry.created_at.strftime("%I:%M%p") %></h6>
+            <h3><%= entry.title %></h3><h6><%= entry.date.strftime("%I:%M%p") %></h6>
             <h6><i class="fa-solid fa-location-dot"></i> <%= entry.address %></h6>
             <p><%= entry.content %></p>
           </div>
@@ -29,16 +40,25 @@
     <% end %>
   </div>
 
-
-  <div class="scroll-container d-flex justify-content-between">
+  <div class="scroll-container d-flex justify-content-between mb-4">
     <% @entries_on_same_date.each do |entry| %>
-            <% if entry.photos.any? %>
-              <% entry.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill %>
-              <% end %>
-           <% end %>
+      <% if entry.photos.any? %>
+        <div class="photo-container">
+          <% entry.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill %>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
+  <div class="row">
+    <div style="height:350px"
+      data-controller="map"
+      id="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 
 </div>
