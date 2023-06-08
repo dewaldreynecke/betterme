@@ -4,12 +4,11 @@
 <div class="container mt-4">
 
   <div class="d-flex justify-content-between">
-    <div class="card">
-      <h3>How are you feeling today?</h3>
-      <p>Mood pills</p>
+    <div class="moodcard">
+      <%= render "mood" %>
     </div>
 
-    <div class="btn btn-ghost">
+    <div class="entrycard">
       <%= link_to "Make a new entry", new_entry_path %>
     </div>
   </div>
