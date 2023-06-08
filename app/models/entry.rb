@@ -6,4 +6,14 @@ class Entry < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  def index
+    @entries = Entry.all
+    @markers = @entries.geocoded.map do |entry|
+      {
+        lat: entry.latitude,
+        lng: entry.longitude
+      }
+    end
+  end
 end
