@@ -1,0 +1,14 @@
+.confirmbox {
+  display: flex;
+  height: calc(100vh - 67.6px);
+  background-color: #fff5bf;
+  align-items: center;
+}
+
+.confirmbody {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}

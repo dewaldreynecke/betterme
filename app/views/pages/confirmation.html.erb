@@ -1,0 +1,8 @@
+<div class="confirmbox">
+  <div class="confirmbody">
+    <h1 class="mb-5">Your journal entry has been saved.</h1>
+    <p><%= @zenquote.quote %></p>
+    <p>&mdash;<em><%= @zenquote.author %></em></p>
+    <%= link_to "Return to Home page", dashboard_path, class: "btn btn-primary mt-4" %>
+  </div>
+</div>

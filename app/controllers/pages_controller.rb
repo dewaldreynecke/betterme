@@ -6,5 +6,16 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
+    @entries = @user.entries
+    @markers = @entries.map do |entry|
+    {
+      lat: entry.latitude,
+      lng: entry.longitude
+    }
+    end
+  end
+
+  def confirmation
+    @zenquote = Zenquote.all.sample
   end
 end

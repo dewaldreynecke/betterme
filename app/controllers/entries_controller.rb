@@ -1,3 +1,5 @@
+require 'date'
+
 class EntriesController < ApplicationController
   def new
     @entry = Entry.new
@@ -6,10 +8,11 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
     @entry.user = current_user
+    @entry.date = Date.today
     if @entry.save
-      redirect_to entries_by_date_path(@entry.created_at.to_date)
+      redirect_to confirmation_path
     else
-      render dashboard_path, status: :unprocessable_entity
+      render new_entry_path, status: :unprocessable_entity
     end
   end
 

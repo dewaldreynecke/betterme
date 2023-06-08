@@ -1,0 +1,2 @@
+class Zenquote < ApplicationRecord
+end
