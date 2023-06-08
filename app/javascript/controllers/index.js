@@ -15,3 +15,6 @@ application.register("hello", HelloController)
 
 import InspirationController from "./inspiration_controller"
 application.register("inspiration", InspirationController)
+
+import ThemeController from "./theme_controller"
+application.register("theme", ThemeController)

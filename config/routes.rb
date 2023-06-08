@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user/update'
   get 'inspirations/random'
   devise_for :users
   # Defines the root path route ("/")
@@ -9,5 +10,7 @@ Rails.application.routes.draw do
 
   resources :entries, only: %i[new create]
   resources :moods, only: [:update]
+  resources :user, only: [:update]
+
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 end
