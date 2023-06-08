@@ -1,3 +1,5 @@
+require 'date'
+
 class EntriesController < ApplicationController
   def new
     @entry = Entry.new
@@ -6,6 +8,7 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
     @entry.user = current_user
+    @entry.date = Date.today
     if @entry.save
       redirect_to confirmation_path
     else
