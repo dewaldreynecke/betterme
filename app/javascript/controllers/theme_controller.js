@@ -5,25 +5,28 @@ export default class extends Controller {
   static targets = ["themeheader", "themeinput", "editbutton", "checkbutton"]
 
   connect() {
-    console.log("theme controller connected")
-    console.log("Here are the targets")
-    console.log("themeheader:")
-    console.log(this.themeheaderTarget)
-    console.log("themeinput:")
-    console.log(this.themeinputTarget)
-    console.log("editbutton:")
-    console.log(this.editbuttonTarget)
-    console.log("checkbutton:")
-    console.log(this.checkbuttonTarget)
   }
 
   displayForm() {
-    // this.headingTarget.classList.add("d-none")
-    console.log("displayForm action triggered")
+    // set the value of the input box before displaying it
+    this.themeinputTarget.value = this.themeheaderTarget.innerText
+    // hide the title and the edit button
+    this.themeheaderTarget.classList.add("d-none")
+    this.editbuttonTarget.classList.add("d-none")
+    // show the form and the checkbutton
+    this.themeinputTarget.classList.remove("d-none")
+    this.checkbuttonTarget.classList.remove("d-none")
   }
 
   hideForm() {
-    // this.headingTarget.innerText = this.formTarget.value
-    console.log("hideForm action triggered")
+    // set the heading to the new value from the form
+    this.themeheaderTarget.innerText = this.themeinputTarget.value
+    // hide the form and the checkbutton
+    this.themeinputTarget.classList.add("d-none")
+    this.checkbuttonTarget.classList.add("d-none")
+    // show the title and the edit button
+    this.themeheaderTarget.classList.remove("d-none")
+    this.editbuttonTarget.classList.remove("d-none")
+    // send the AJAX update
   }
 }
