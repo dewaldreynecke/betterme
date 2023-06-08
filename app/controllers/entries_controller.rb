@@ -7,7 +7,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.user = current_user
     if @entry.save
-      redirect_to dashboard_path
+      redirect_to entries_by_date_path(@entry.created_at.to_date)
     else
       render dashboard_path, status: :unprocessable_entity
     end
