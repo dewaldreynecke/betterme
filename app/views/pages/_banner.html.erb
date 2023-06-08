@@ -2,12 +2,12 @@
   <div class="container m-5">
     <h3><strong>06 June 2023</strong></h3>
     <div class="d-flex" data-controller="theme">
-      <h1 class="pb-2" data-theme-target="themeheader"><ul>I will be more present and kind</ul></h1>
+      <h1 class="pb-2" data-theme-target="themeheader"><%= @user.theme %></h1>
       <%= simple_form_for(@user, html: { class: "d-none", data: {theme_target: "themeform", novalidate: true} }) do |f| %>
         <%= f.input :theme, input_html: { data: {theme_target: "themeinput"}}, label: "Change your theme to something new" %>
+        <%= f.submit %>
       <% end %>
       <p data-theme-target="editbutton" data-action="click->theme#displayForm"><i class="fa-solid fa-pen"></i></p>
-      <p class="d-none" data-theme-target="checkbutton" data-action="click->theme#hideForm"><i class="fa-solid fa-check"></i></p>
     </div>
   </div>
 </div>

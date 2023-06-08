@@ -10,23 +10,38 @@ export default class extends Controller {
   displayForm() {
     // set the value of the input box before displaying it
     this.themeinputTarget.value = this.themeheaderTarget.innerText
+
     // hide the title and the edit button
     this.themeheaderTarget.classList.add("d-none")
     this.editbuttonTarget.classList.add("d-none")
-    // show the form and the checkbutton
+
+    // show the form
     this.themeformTarget.classList.remove("d-none")
-    this.checkbuttonTarget.classList.remove("d-none")
   }
 
-  hideForm() {
+  update(event) {
+    event.preventDefault()
+
     // set the heading to the new value from the form
     this.themeheaderTarget.innerText = this.themeinputTarget.value
-    // hide the form and the checkbutton
+
+    // hide the form
     this.themeformTarget.classList.add("d-none")
-    this.checkbuttonTarget.classList.add("d-none")
+
     // show the title and the edit button
     this.themeheaderTarget.classList.remove("d-none")
     this.editbuttonTarget.classList.remove("d-none")
+
     // send the AJAX update
+    const url = this.themeformTarget.action
+    fetch(url, {
+      method: "PATCH",
+      headers: { "Accept": "html" },
+      body: new FormData(this.themeformTarget)
+    })
+    .then(response => response.text())
+    .then((data) => {
+      console.log(data)
+    })
   }
 }
