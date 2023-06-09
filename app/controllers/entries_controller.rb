@@ -22,8 +22,8 @@ class EntriesController < ApplicationController
   def show_by_date
     @date = Date.parse(params[:date])
     @entries_on_same_date = Entry.where(date: @date)
-    @next_entry = Entry.where("date > ?", @date).order(date: :asc).first
-    @previous_entry = Entry.where("date < ?", @date).order(date: :desc).first
+    # @next_entry = Entry.where("date > ?", @date).order(date: :asc).first
+    # @previous_entry = Entry.where("date < ?", @date).order(date: :desc).first
 
     @user = current_user
     @entries = @user.entries
