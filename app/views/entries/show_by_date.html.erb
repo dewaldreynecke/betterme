@@ -40,25 +40,32 @@
     <% end %>
   </div>
 
-  <div class="scroll-container d-flex justify-content-between mb-4">
-    <% @entries_on_same_date.each do |entry| %>
-      <% if entry.photos.any? %>
-        <div class="photo-container">
-          <% entry.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill %>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
 
-  <div class="row">
-    <div style="height:350px"
-      data-controller="map"
-      id="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
+  <% if @entries_on_same_date.all? { |entry| entry.photos.any? } %>
+    <div class="scroll-container d-flex justify-content-between mb-4">
+      <% @entries_on_same_date.each do |entry| %>
+        <% if entry.photos.any? %>
+          <div class="photo-container">
+            <% entry.photos.each do |photo| %>
+              <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-  </div>
+  <% end %>
+
+
+
+  <% if @markers.size.positive? %>
+    <div class="row">
+      <div style="height:350px"
+        data-controller="map"
+        id="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  <% end %>
 
 </div>
