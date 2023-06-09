@@ -1,4 +1,4 @@
-<div class="banner d-flex align-items-center justify-content-center mb-3" style="background-color: #FFF8DD">
+<div class="banner d-flex align-items-center justify-content-center" style="background-color: #D7F0F5">
   <div class="container m-5">
     <div class="text-center">
       <h1 class="pb-2">My Journal Entries</h1>
@@ -25,11 +25,11 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container show">
   <div class="row">
     <% @entries_on_same_date.each do |entry| %>
-      <div class="col-lg-6 h-100">
-        <div class="card mb-3">
+      <div class="col-lg-6 h-100 mt-4">
+        <div class="card mb-3 rounded-5">
           <div class="card-body">
             <h3><%= entry.title %></h3><h6><%= entry.date.strftime("%I:%M%p") %></h6>
             <h6><i class="fa-solid fa-location-dot"></i> <%= entry.address %></h6>
@@ -58,8 +58,8 @@
 
 
   <% if @markers.size.positive? %>
-    <div class="row">
-      <div style="height:350px"
+    <div class="row locator">
+      <div style="height:350px; border-radius:20px"
         data-controller="map"
         id="map"
         data-map-markers-value="<%= @markers.to_json %>"
