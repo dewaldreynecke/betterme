@@ -11,14 +11,14 @@
     </div>
 
     <div class="entrycard">
-      <%= link_to "Make a new entry", new_entry_path %>
+      <%= link_to "See today's entries", entries_by_date_path(:date => '2023-06-09'), class: "btn btn-success" %>
     </div>
   </div>
 
-  <div class="card mt-4">
+  <%# <div class="card mt-4">
     <h2>Mood over time</h2>
     <p>Line graph</p>
-  </div>
+  </div> %>
 
   <div class="d-flex justify-content-between mt-4">
     <div class="container">
