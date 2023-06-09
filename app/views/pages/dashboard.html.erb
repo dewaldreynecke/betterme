@@ -4,8 +4,10 @@
 <div class="container mt-4">
 
   <div class="d-flex justify-content-between">
-    <div class="moodcard">
-      <%= render "mood" %>
+    <div data-controller="mood" >
+      <div class="moodcard" data-mood-target="moodcard">
+        <%= render "mood" %>
+      </div>
     </div>
 
     <div class="entrycard">
