@@ -5,18 +5,23 @@ export default class extends Controller {
   static targets = ["message"]
 
   connect() {
-    console.log("inspiration controller is connected");
   }
 
   cycle() {
-    console.log("inspiration button was clicked");
     // do AJAX to fetch new text
-    const url = 'http://localhost:3000/inspirations/random'
+    const url = '/inspirations/random'
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
     .then((data) => {
       // replace the text in textTarget
-      this.messageTarget.innerText = data
+      const sentence = this.#decodeHtml(data)
+      this.messageTarget.innerText = sentence
     })
+  }
+
+  #decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
   }
 }
