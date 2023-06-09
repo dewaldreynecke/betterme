@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["heading", "form", "edit", "check"]
 
   connect() {
-    console.log("edit-movie controller connected")
   }
 
   displayForm() {
