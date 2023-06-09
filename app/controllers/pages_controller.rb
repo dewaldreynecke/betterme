@@ -8,11 +8,12 @@ class PagesController < ApplicationController
     @user = current_user
     @entries = @user.entries
     @markers = @entries.map do |entry|
-    {
-      lat: entry.latitude,
-      lng: entry.longitude
-    }
+      {
+        lat: entry.latitude,
+        lng: entry.longitude
+      }
     end
+    @mood = Mood.where(date: Date.today)
   end
 
   def confirmation
