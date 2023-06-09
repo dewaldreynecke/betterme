@@ -84,7 +84,7 @@ entry.save
 entry = Entry.new(user_id: User.last.id,
   title: "Overcoming Obstacles with Determination",
   content: "Today, on June 26th, I faced numerous obstacles that tested my resolve. It was a challenging journey, but with unwavering determination, I managed to overcome them one by one. The strength and resilience I discovered within myself were invaluable.",
-  address: "1 Audacia Road, Stellenbosch, 7600"
+  address: "97 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 05, 26)
 entry.save
@@ -100,7 +100,7 @@ entry.save
 entry = Entry.new(user_id: User.last.id,
   title: "Embracing New Beginnings",
   content: "Today, on June 28th, I embraced new beginnings with excitement and optimism. Change can be intimidating, but it also brings countless opportunities for growth and self-discovery. I'm ready to embark on this journey with an open heart and a curious mind.",
-  address: "45 Main Road, Franschhoek, 7690"
+  address: "67 Carlisle St, Paarden Eiland, Cape Town, 7405"
 )
 entry.date = Date.new(2023, 05, 28)
 entry.save
@@ -132,7 +132,7 @@ entry.save
 entry = Entry.new(user_id: User.last.id,
   title: "Awe,Inspiring Moments of Wonder",
   content: "Today, on June 18th, I experienced awe,inspiring moments that left me speechless. Whether it was witnessing a breathtaking sunrise or marveling at the grandeur of nature, these experiences filled me with a sense of wonder and made me appreciate the beauty of the world.",
-  address: "45 Main Road, Franschhoek, 7690"
+  address: "67 Carlisle St, Paarden Eiland, Cape Town, 7405"
 )
 entry.date = Date.new(2023, 06, 01)
 entry.save
