@@ -22,6 +22,8 @@ class EntriesController < ApplicationController
   def show_by_date
     @date = Date.parse(params[:date])
     @entries_on_same_date = Entry.where(date: @date)
+    @next_entry = Entry.where("date > ?", @date).order(date: :asc).first
+    @previous_entry = Entry.where("date < ?", @date).order(date: :desc).first
     @markers = @entries_on_same_date.geocoded.map do |entry|
     {
       lat: entry.latitude,
@@ -36,4 +38,3 @@ class EntriesController < ApplicationController
     params.require(:entry).permit(:title, :content, :address, photos: [])
   end
 end
-

@@ -1,12 +1,18 @@
 .scroll-container {
-  background-color: #CED4C9;
+  background-color: white;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
   max-width: 100%;
   width: fit-content;
+  border-radius: 20px;
 }
 
 .scroll-container img {
   padding: 10px;
 }
+
+.show {
+  background-color: #FDF8E6;
+}
+
