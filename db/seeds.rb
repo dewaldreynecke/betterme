@@ -26,197 +26,225 @@ puts ''
 puts 'Creating entries...'
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Creating Memories with Loved Ones",
-                  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched."
-)
+    title: "Creating Memories with Loved Ones",
+    content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
+    address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001"
+  )
 entry.date = Date.new(2023, 05, 19)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Finding Balance in the Chaos",
-                  content: "Today, on June 20th, was a whirlwind of activity and responsibilities, but amidst the chaos, I found moments of calm and balance. It's in those moments that I can pause, breathe, and remind myself that everything will be okay."
-)
+    title: "Finding Balance in the Chaos",
+    content: "Today, on June 20th, was a whirlwind of activity and responsibilities, but amidst the chaos, I found moments of calm and balance. It's in those moments that I can pause, breathe, and remind myself that everything will be okay.",
+    address: "27 Somerset Road, Green Point, Cape Town, 8005"
+  )
 entry.date = Date.new(2023, 05, 20)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Battling Inner Demons",
-                  content: "Today, on June 21st, I faced my inner demons head,on. The battles within ourselves can be the toughest, but I'm determined to confront my fears, doubts, and insecurities. It's not an easy journey, but it's one that leads to growth and healing."
-)
+    title: "Battling Inner Demons",
+    content: "Today, on June 21st, I faced my inner demons head,on. The battles within ourselves can be the toughest, but I'm determined to confront my fears, doubts, and insecurities. It's not an easy journey, but it's one that leads to growth and healing.",
+    address: "137 Long Street, Cape Town City Centre, Cape Town, 8000"
+  )
 entry.date = Date.new(2023, 05, 21)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Weathering the Storm",
-                  content: "Today, on June 22nd, I felt like I was weathering a storm. Life's challenges seemed overwhelming, and the weight on my shoulders felt unbearable. But just like a storm eventually passes, I hold onto the belief that brighter days are ahead."
-)
+    title: "Weathering the Storm",
+    content: "Today, on June 22nd, I felt like I was weathering a storm. Life's challenges seemed overwhelming, and the weight on my shoulders felt unbearable. But just like a storm eventually passes, I hold onto the belief that brighter days are ahead.",
+    address: "23 Buitenkant Street, Cape Town City Centre, Cape Town, 8001"
+  )
 entry.date = Date.new(2023, 05, 22)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Awe,Inspiring Achievements",
-                  content: "Today, on June 23rd, I achieved something truly awe,inspiring. It may be a personal milestone, a professional accomplishment, or a significant breakthrough. The sense of awe and pride in my own abilities is electrifying."
+  title: "Awe,Inspiring Achievements",
+  content: "Today, on June 23rd, I achieved something truly awe,inspiring. It may be a personal milestone, a professional accomplishment, or a significant breakthrough. The sense of awe and pride in my own abilities is electrifying.",
+  address: "112 Bree Street, Cape Town City Centre, Cape Town, 8000"
 )
 entry.date = Date.new(2023, 05, 23)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Spreading Kindness and Receiving Joy",
-                  content: "Today, on June 24th, I had the opportunity to spread kindness and witness the joy it brings. Whether through a simple act of generosity or a heartfelt gesture, the happiness I received in return was immeasurable. It's a beautiful reminder of the power of compassion."
+  title: "Spreading Kindness and Receiving Joy",
+  content: "Today, on June 24th, I had the opportunity to spread kindness and witness the joy it brings. Whether through a simple act of generosity or a heartfelt gesture, the happiness I received in return was immeasurable. It's a beautiful reminder of the power of compassion.",
+  address: "27 Somerset Road, Green Point, Cape Town, 8005"
 )
 entry.date = Date.new(2023, 05, 24)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Embracing the Journey of Self-Discovery",
-                  content: "Today, on June 25th, I explored the path of self-discovery and found solace in the process. It's okay not to have all the answers or know exactly where I'm headed. Embracing the journey and the lessons along the way is what truly matters."
+  title: "Embracing the Journey of Self-Discovery",
+  content: "Today, on June 25th, I explored the path of self-discovery and found solace in the process. It's okay not to have all the answers or know exactly where I'm headed. Embracing the journey and the lessons along the way is what truly matters.",
+  address: "32 Huguenot Street, Franschhoek, 7690"
 )
 entry.date = Date.new(2023, 05, 25)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Overcoming Obstacles with Determination",
-                  content: "Today, on June 26th, I faced numerous obstacles that tested my resolve. It was a challenging journey, but with unwavering determination, I managed to overcome them one by one. The strength and resilience I discovered within myself were invaluable."
+  title: "Overcoming Obstacles with Determination",
+  content: "Today, on June 26th, I faced numerous obstacles that tested my resolve. It was a challenging journey, but with unwavering determination, I managed to overcome them one by one. The strength and resilience I discovered within myself were invaluable.",
+  address: "1 Audacia Road, Stellenbosch, 7600"
 )
 entry.date = Date.new(2023, 05, 26)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Seeking Healing and Embracing Self-Care",
-                  content: "Today, on June 27th, I focused on healing and prioritizing self-care. When days are tough, it's crucial to be kind to ourselves and nurture our well,being. By giving myself the care and attention I need, I take small steps toward finding peace in difficult times."
+  title: "Seeking Healing and Embracing Self-Care",
+  content: "Today, on June 27th, I focused on healing and prioritizing self-care. When days are tough, it's crucial to be kind to ourselves and nurture our well,being. By giving myself the care and attention I need, I take small steps toward finding peace in difficult times.",
+  address: "137 Long Street, Cape Town City Centre, Cape Town, 8000"
 )
 entry.date = Date.new(2023, 05, 27)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Embracing New Beginnings",
-                  content: "Today, on June 28th, I embraced new beginnings with excitement and optimism. Change can be intimidating, but it also brings countless opportunities for growth and self-discovery. I'm ready to embark on this journey with an open heart and a curious mind."
+  title: "Embracing New Beginnings",
+  content: "Today, on June 28th, I embraced new beginnings with excitement and optimism. Change can be intimidating, but it also brings countless opportunities for growth and self-discovery. I'm ready to embark on this journey with an open heart and a curious mind.",
+  address: "45 Main Road, Franschhoek, 7690"
 )
 entry.date = Date.new(2023, 05, 28)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Finding Joy in Simple Pleasures",
-                  content: "Today, on June 29th, I found joy in the simplest of pleasures. Whether it was relishing a delicious meal, engaging in a favorite hobby, or sharing laughter with friends, these moments reminded me of the beauty and abundance of life."
+  title: "Finding Joy in Simple Pleasures",
+  content: "Today, on June 29th, I found joy in the simplest of pleasures. Whether it was relishing a delicious meal, engaging in a favorite hobby, or sharing laughter with friends, these moments reminded me of the beauty and abundance of life.",
+  address: "100 Main Road, Kalk Bay, Cape Town, 7975"
 )
 entry.date = Date.new(2023, 05, 29)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Cultivating Patience and Acceptance",
-                  content: "Today, on June 30th, I focused on cultivating patience and acceptance. Life unfolds at its own pace, and sometimes we need to let go of control and trust in the process. Embracing the present moment and finding peace within it is a valuable practice."
+  title: "Cultivating Patience and Acceptance",
+  content: "Today, on June 30th, I focused on cultivating patience and acceptance. Life unfolds at its own pace, and sometimes we need to let go of control and trust in the process. Embracing the present moment and finding peace within it is a valuable practice.",
+  address: "41 Main Road, Newlands, Cape Town, 7700"
 )
 entry.date = Date.new(2023, 05, 30)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Finding Strength in Vulnerability",
-                  content: "Today, on June 17th, was a terrible day, and I felt vulnerable and exposed. But in embracing my vulnerability, I discovered strength. It takes courage to confront difficult emotions and open up, and I'm proud of myself for taking that step."
+  title: "Finding Strength in Vulnerability",
+  content: "Today, on June 17th, was a terrible day, and I felt vulnerable and exposed. But in embracing my vulnerability, I discovered strength. It takes courage to confront difficult emotions and open up, and I'm proud of myself for taking that step.",
+  address: "4 Church Street, Durbanville, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 05, 31)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Awe,Inspiring Moments of Wonder",
-                  content: "Today, on June 18th, I experienced awe,inspiring moments that left me speechless. Whether it was witnessing a breathtaking sunrise or marveling at the grandeur of nature, these experiences filled me with a sense of wonder and made me appreciate the beauty of the world."
+  title: "Awe,Inspiring Moments of Wonder",
+  content: "Today, on June 18th, I experienced awe,inspiring moments that left me speechless. Whether it was witnessing a breathtaking sunrise or marveling at the grandeur of nature, these experiences filled me with a sense of wonder and made me appreciate the beauty of the world.",
+  address: "45 Main Road, Franschhoek, 7690"
 )
 entry.date = Date.new(2023, 06, 01)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Learning from Mistakes and Embracing Growth",
-                  content: "Today, on July 1st, I acknowledged my mistakes and chose to view them as opportunities for growth. It's through failures that we learn the most valuable lessons and refine our paths. I'm committed to using these experiences as stepping stones toward a better future."
+  title: "Learning from Mistakes and Embracing Growth",
+  content: "Today, on July 1st, I acknowledged my mistakes and chose to view them as opportunities for growth. It's through failures that we learn the most valuable lessons and refine our paths. I'm committed to using these experiences as stepping stones toward a better future.",
+  address: "180 Kloof Road, Bantry Bay, Cape Town, 8005"
 )
 entry.date = Date.new(2023, 06, 03)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Seeking Support and Holding onto Hope",
-                  content: "Today I reached out for support during a difficult time. It's essential to lean on loved ones and professionals who can provide guidance and comfort. Even in the darkest moments, there is hope, and together we can find the strength to overcome."
+  title: "Seeking Support and Holding onto Hope",
+  content: "Today I reached out for support during a difficult time. It's essential to lean on loved ones and professionals who can provide guidance and comfort. Even in the darkest moments, there is hope, and together we can find the strength to overcome.",
+  address: "93 Brommersvlei Road, Constantia, Cape Town, 7806"
 )
 entry.date = Date.new(2023, 06, 04)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Celebrating Personal Growth and Transformation",
-                  content: "Today I celebrated my personal growth and transformation. It's incredible to reflect on how far I've come, overcoming challenges and evolving into a stronger version of myself. The journey continues, and I'm excited for what lies ahead."
+  title: "Celebrating Personal Growth and Transformation",
+  content: "Today I celebrated my personal growth and transformation. It's incredible to reflect on how far I've come, overcoming challenges and evolving into a stronger version of myself. The journey continues, and I'm excited for what lies ahead.",
+  address: "76 Orange Street, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 06, 05)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Embracing Freedom and Gratitude",
-                  content: "Today I celebrated freedom and expressed gratitude for the opportunities and privileges I have. It's important to recognize and appreciate the blessings in our lives, both big and small. This day reminds me of the joy that comes from living in a free and abundant world."
+  title: "Embracing Freedom and Gratitude",
+  content: "Today I celebrated freedom and expressed gratitude for the opportunities and privileges I have. It's important to recognize and appreciate the blessings in our lives, both big and small. This day reminds me of the joy that comes from living in a free and abundant world.",
+  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 06, 06)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Finding Peace in the Present Moment",
-                  content: "Today I focused on finding peace in the present moment. Amidst the busyness of life, it's crucial to take a step back, breathe, and fully immerse ourselves in the beauty and serenity of the now."
+  title: "Finding Peace in the Present Moment",
+  content: "Today I focused on finding peace in the present moment. Amidst the busyness of life, it's crucial to take a step back, breathe, and fully immerse ourselves in the beauty and serenity of the now.",
+  address: "27 Somerset Road, Green Point, Cape Town, 8005"
 )
 entry.date = Date.new(2023, 06, 07)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "A Day of Triumph and Success",
-                  content: "Today, on June 8th, was a day filled with triumph and success. I accomplished a major goal that I've been working towards for months, and the feeling of achievement is overwhelming. The sense of fulfillment and pride in my abilities is simply awesome."
+  title: "A Day of Triumph and Success",
+  content: "Today, on June 8th, was a day filled with triumph and success. I accomplished a major goal that I've been working towards for months, and the feeling of achievement is overwhelming. The sense of fulfillment and pride in my abilities is simply awesome.",
+  address: "137 Long Street, Cape Town City Centre, Cape Town, 8000"
 )
 entry.date = Date.new(2023, 06, 10)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Blissful Moments of Pure Joy",
-                  content: "On June 9th, today, I experienced moments of pure joy that warmed my heart and brought a smile to my face. Whether it was spending time with loved ones, engaging in my favorite hobbies, or witnessing a beautiful sunset, every moment was infused with happiness."
+  title: "Blissful Moments of Pure Joy",
+  content: "On June 9th, today, I experienced moments of pure joy that warmed my heart and brought a smile to my face. Whether it was spending time with loved ones, engaging in my favorite hobbies, or witnessing a beautiful sunset, every moment was infused with happiness.",
+  address: "15 Dreyer Street, Claremont, Cape Town, 7708"
 )
 entry.date = Date.new(2023, 06, 10)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Embracing Imperfections and Finding Contentment",
-                  content: "Today, June 10th, was an okay day, and that's perfectly fine. Life isn't always about soaring highs or crushing lows. It's about accepting the imperfections, finding contentment in the ordinary, and appreciating the simple joys that come my way."
+  title: "Embracing Imperfections and Finding Contentment",
+  content: "Today, June 10th, was an okay day, and that's perfectly fine. Life isn't always about soaring highs or crushing lows. It's about accepting the imperfections, finding contentment in the ordinary, and appreciating the simple joys that come my way.",
+  address: "41 Main Road, Newlands, Cape Town, 7700"
 )
 entry.date = Date.new(2023, 06, 10)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Dealing with Setbacks and Bouncing Back Stronger",
-                  content: "On June 11th, today was a challenging day filled with setbacks and obstacles. Things didn't go as planned, and it felt disheartening. However, I refuse to let these circumstances define me. I'm determined to learn from these experiences and bounce back stronger than ever."
+  title: "Dealing with Setbacks and Bouncing Back Stronger",
+  content: "On June 11th, today was a challenging day filled with setbacks and obstacles. Things didn't go as planned, and it felt disheartening. However, I refuse to let these circumstances define me. I'm determined to learn from these experiences and bounce back stronger than ever.",
+  address: "23 Buitenkant Street, Cape Town City Centre, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 06, 11)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Navigating Darkness and Holding onto Hope",
-                  content: "Today, on June 12th, was a terrible day. I felt overwhelmed by sadness, disappointment, and uncertainty. But even in the midst of darkness, I hold onto a glimmer of hope. I remind myself that difficult times eventually pass, and there is always a ray of light waiting to break through."
+  title: "Navigating Darkness and Holding onto Hope",
+  content: "Today, on June 12th, was a terrible day. I felt overwhelmed by sadness, disappointment, and uncertainty. But even in the midst of darkness, I hold onto a glimmer of hope. I remind myself that difficult times eventually pass, and there is always a ray of light waiting to break through.",
+  address: "15 Dreyer Street, Claremont, Cape Town, 7708"
 )
 entry.date = Date.new(2023, 06, 12)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Surpassing Expectations and Celebrating Victories",
-                  content: "On June 13th, today exceeded all expectations as I accomplished more than I thought possible. It's moments like these that remind me of my potential and fuel my drive to reach even greater heights. The feeling of success is truly awesome."
+  title: "Surpassing Expectations and Celebrating Victories",
+  content: "On June 13th, today exceeded all expectations as I accomplished more than I thought possible. It's moments like these that remind me of my potential and fuel my drive to reach even greater heights. The feeling of success is truly awesome.",
+  address: "4 Church Street, Durbanville, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 06, 13)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Gratitude for the Little Things",
-                  content: "Today, on June 14th, I found happiness in the little things. From savoring a delicious cup of coffee to enjoying a walk in nature, these small moments brought immense joy. It's a beautiful reminder that happiness can be found in the simplest of pleasures."
+  title: "Gratitude for the Little Things",
+  content: "Today, on June 14th, I found happiness in the little things. From savoring a delicious cup of coffee to enjoying a walk in nature, these small moments brought immense joy. It's a beautiful reminder that happiness can be found in the simplest of pleasures.",
+  address: "112 Bree Street, Cape Town City Centre, Cape Town, 8000"
 )
 entry.date = Date.new(2023, 06, 14)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Embracing the Ebb and Flow of Life",
-                  content: "Today, June 15th, was an okay day, and I've learned to embrace the ebb and flow of life. Just like the tides, life has its highs and lows. And in the okay moments, I find solace in knowing that everything is part of a greater journey."
+  title: "Embracing the Ebb and Flow of Life",
+  content: "Today, June 15th, was an okay day, and I've learned to embrace the ebb and flow of life. Just like the tides, life has its highs and lows. And in the okay moments, I find solace in knowing that everything is part of a greater journey.",
+  address: "27 Somerset Road, Green Point, Cape Town, 8005"
 )
 entry.date = Date.new(2023, 06, 15)
 entry.save
 
 entry = Entry.new(user_id: User.last.id,
-                  title: "Coping with Disappointment and Seeking Resilience",
-                  content: "Today, on June 16th, was a tough day filled with disappointment and frustration. It's during these challenging times that I dig deep to find resilience within myself. I remind myself that setbacks are temporary, and I have the strength to overcome them."
+  title: "Coping with Disappointment and Seeking Resilience",
+  content: "Today, on June 16th, was a tough day filled with disappointment and frustration. It's during these challenging times that I dig deep to find resilience within myself. I remind myself that setbacks are temporary, and I have the strength to overcome them.",
+  address: "32 Huguenot Street, Franschhoek, 7690"
 )
 entry.date = Date.new(2023, 06, 16)
 entry.save
