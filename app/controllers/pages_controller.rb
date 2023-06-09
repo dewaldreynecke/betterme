@@ -13,7 +13,6 @@ class PagesController < ApplicationController
       lng: entry.longitude
     }
     end
-    raise
   end
 
   def confirmation
