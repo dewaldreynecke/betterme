@@ -2,11 +2,8 @@ require 'date'
 
 class MoodsController < ApplicationController
   def new
-    @chosenmood = params[:m]
-    @mood = Mood.new(mood: :"#{@chosenmood}")
-    @mood.user = current_user
-    @mood.date = Date.today
-    if @mood.save!
+    @mood = Mood.new(mood: :"#{params[:m]}", user: current_user, date: Date.today)
+    if @mood.save
       respond_to do |format|
         format.html { redirect_to dashboard_path }
         format.text { render partial: "pages/#{params[:m]}", formats: [:html] }
