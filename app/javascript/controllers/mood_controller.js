@@ -9,22 +9,57 @@ export default class extends Controller {
   }
 
   awesome() {
-    console.log("awesome mood selected");
+    fetch("/moods/new?m=awesome", {
+      method: "GET",
+      headers: { "Accept": "text/plain" },
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.moodcardTarget.innerHTML = data
+      })
   }
 
   happy() {
-    console.log("happy mood selected");
+    fetch("/moods/new?m=happy", {
+      method: "GET",
+      headers: { "Accept": "text/plain" },
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.moodcardTarget.innerHTML = data
+      })
   }
 
   okay() {
-    console.log("okay mood selected");
+    fetch("/moods/new?m=okay", {
+      method: "GET",
+      headers: { "Accept": "text/plain" },
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.moodcardTarget.innerHTML = data
+      })
   }
 
   bad() {
-    console.log("bad mood selected");
+    fetch("/moods/new?m=bad", {
+      method: "GET",
+      headers: { "Accept": "text/plain" },
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.moodcardTarget.innerHTML = data
+      })
   }
 
   terrible() {
-    console.log("terrible mood selected");
+    fetch("/moods/new?m=terrible", {
+      method: "GET",
+      headers: { "Accept": "text/plain" },
+    })
+      .then(response => response.text())
+      .then((data) => {
+        this.moodcardTarget.innerHTML = data
+      })
   }
 }

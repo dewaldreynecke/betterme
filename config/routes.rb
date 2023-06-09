@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/inspiration/random', to: 'inspiration#random', as: 'random_inspiration'
 
   resources :entries, only: %i[new create]
-  resources :moods, only: [:update]
+  resources :moods, only: [:new]
   resources :user, only: [:update]
 
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
