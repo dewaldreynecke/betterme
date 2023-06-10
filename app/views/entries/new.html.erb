@@ -1,6 +1,13 @@
-<%= render 'banner' %>
+<div class="banner d-flex align-items-center justify-content-center mb-3">
+  <div class="container m-5">
+    <div class="text-center" data-controller="inspiration">
+      <h1 class="pb-2" data-inspiration-target="message">What are you grateful for?</h1>
+      <button class="btn btn-sm btn-outline-dark" data-action="click->inspiration#cycle">Show another inspiration</button>
+    </div>
+  </div>
+</div>
 
-<div class="container mt-4">
+<div class="container mt-5">
   <%= simple_form_for(@entry) do |f| %>
     <div class="d-flex" data-controller="edit-title">
       <h4 data-edit-title-target="heading">My journal entry</h4>
