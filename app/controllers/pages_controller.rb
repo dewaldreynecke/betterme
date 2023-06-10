@@ -5,15 +5,15 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @user = current_user
-    @entries = @user.entries
-    @markers = @entries.map do |entry|
+    @markers = current_user.entries.map do |entry|
       {
         lat: entry.latitude,
         lng: entry.longitude
       }
     end
     @mood = Mood.where(date: Date.today)
+    @current_theme = Theme.where(user: current_user).last
+    @theme = Theme.new
   end
 
   def confirmation
