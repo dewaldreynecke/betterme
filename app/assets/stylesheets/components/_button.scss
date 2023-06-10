@@ -1,41 +1,35 @@
-btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+#button-74 {
+  background-color: #9CA891;
+  border-radius: 30px;
+  border: 1px solid #9CA891;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: #181A17;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.btn-ghost:hover {
-  opacity: 1;
+#button-74:hover {
+  background-color: #fff;
 }
 
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #670BFF;
-  transition: background 0.3s ease;
+#button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
-.btn-flat:hover {
-  background: #4D04C4;
-  color: white;
-}
-
-.btn-gradient {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+@media (min-width: 920px) {
+  #button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+    margin-right: 17px;
+  }
 }
