@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_10_124656) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_10_142604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -73,7 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_124656) do
   end
 
   create_table "themes", force: :cascade do |t|
-    t.text "text"
+    t.string "text"
     t.datetime "start"
     t.datetime "end"
     t.bigint "user_id", null: false
