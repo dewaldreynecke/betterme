@@ -5,6 +5,11 @@ class ThemesController < ApplicationController
     @current_theme = @themes.shift
   end
 
+  def show
+    @theme = Theme.find(params[:id])
+    @entries = @theme.entries
+  end
+
   def create
     @user = current_user
     # set end date for the current theme

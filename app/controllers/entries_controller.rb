@@ -16,9 +16,6 @@ class EntriesController < ApplicationController
     end
   end
 
-  def option
-  end
-
   def show_by_date
     @date = Date.parse(params[:date])
     @entries_on_same_date = Entry.where(date: @date)
