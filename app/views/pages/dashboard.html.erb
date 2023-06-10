@@ -3,37 +3,33 @@
 
 <div class="container mt-4">
 
+
   <div class="d-flex justify-content-between">
     <div data-controller="mood" >
-      <div class="moodcard" data-mood-target="moodcard">
+      <div class="moodcard stretch" data-mood-target="moodcard">
         <%= render "mood" %>
       </div>
     </div>
-
-    <div class="entrycard">
-      <%= link_to "See today's entries", entries_by_date_path(:date => '2023-06-09'), class: "btn btn-success" %>
-    </div>
-  </div>
 
   <%# <div class="card mt-4">
     <h2>Mood over time</h2>
     <p>Line graph</p>
   </div> %>
+<div>
+    <div class="d-flex justify-content-between mt-4">
+      <div class="container">
+        <%= month_calendar do |date| %>
+          <%= date.day %>
+        <% end %>
+      </div>
 
-  <div class="d-flex justify-content-between mt-4">
-    <div class="container">
-      <%= month_calendar do |date| %>
-        <%= date.day %>
-      <% end %>
+    <div style="width:800px; height:467px"
+      data-controller="map"
+      id="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-
-  <div style="width:800px; height:467px"
-    data-controller="map"
-    id="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
 </div>
 
   <div class="d-flex justify-content-evenly mt-4">
