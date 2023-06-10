@@ -1,6 +1,6 @@
 <div class="banner d-flex align-items-center justify-content-center mb-3" style="background-color: #fff5bf">
   <div class="container m-5">
-    <h3><strong>06 June 2023</strong></h3>
+    <h3><%= Date.today.strftime("%d-%m-%Y") %></h3>
     <div class="d-flex" data-controller="theme">
       <h1 class="pb-2" data-theme-target="themeheader"><%= @user.theme %></h1>
       <%= simple_form_for(@user, html: { class: "d-none", data: {theme_target: "themeform", novalidate: true} }) do |f| %>
