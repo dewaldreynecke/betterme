@@ -15,12 +15,27 @@
 
   </head>
 
+
   <body class="bg-color">
   <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
 
-  <%= yield %>
+  <body>
+    <section>
+      <div class="wrapper">
+        <header>
+          <%= render "shared/navbar" %>
+        </header>
+        <main>
+          <%= render "shared/flashes" %>
+          <%= yield %>
+        </main>
+        <footer>
+          <%= render "shared/footer" %>
+        </footer>
+      </div>
+    </section>
 
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
   </body>
 </html>
