@@ -14,6 +14,11 @@
 @import "pages/index";
 @import "components/image_scroll";
 
+
+// Custom background color globally for app
+.bg-color {
+  background-color: #FBF4D8;
+  
 // Custom CSS to make the navbar and footer locate correctly for entire app
 html {
   height:100%;
