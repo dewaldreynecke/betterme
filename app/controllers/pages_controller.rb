@@ -14,6 +14,8 @@ class PagesController < ApplicationController
       }
     end
     @mood = Mood.where(date: Date.today)
+    @current_theme = Theme.where(user: @user).last
+    @theme = Theme.new
   end
 
   def confirmation
