@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :entries, only: %i[new create]
   resources :moods, only: [:new]
   resources :user, only: [:update]
+  resources :theme, only: %i[create index]
 
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 end
