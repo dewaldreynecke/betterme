@@ -6,7 +6,7 @@
       <p class="m-0">This has been your theme since <strong><%= @current_theme.start.strftime("%e %B %Y") %></strong> and there are <strong><%= pluralize(@current_theme.entries.count, 'entry') %></strong> associated with this theme.</p>
     </div>
     <% unless @current_theme.entries.count.zero? %>
-      <%= link_to "View Entries", theme_path(@current_theme), class: "btn btn-primary" %>
+      <%= link_to "View Entries", theme_path(@current_theme), id: "button-74", style: "margin-top: 5px; margin-bottom: 5px; padding-top: 10px;" %>
     <% end %>
   </div>
   <% @themes.each do |theme| %>
@@ -16,7 +16,7 @@
         <p class="m-0">From <strong><%= theme.start.strftime("%e %B %Y") %></strong> to <strong><%= theme.end.strftime("%e %B %Y") %></strong> with <strong><%= pluralize(theme.entries.count, 'entry') %></strong>.</p>
       </div>
       <% unless theme.entries.count.zero? %>
-        <%= link_to "View Entries", theme_path(theme), class: "btn btn-primary" %>
+        <%= link_to "View Entries", theme_path(theme), id: "button-74", style: "margin-top: 5px; margin-bottom: 5px; padding-top: 10px;" %>
       <% end %>
     </div>
   <% end %>
