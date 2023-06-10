@@ -1,0 +1,14 @@
+$custom-colors: (
+  "dark-green": $dark-green
+  "olive-green": $olive-green
+  "mint-green": $mint-green
+  "body-yellow": $body-yellow
+  "mood-yellow": $mood-yellow
+  "mood-blue": $mood-blue
+  "mood-green": $mood-green
+  "mood-orange": $mood-orange
+  "mood-red": $mood-red
+  "text-dark": $text-dark
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
