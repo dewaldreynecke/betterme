@@ -1,3 +1,5 @@
+<% require 'date' %>
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to dashboard_path, class: "navbar-brand" do %>
@@ -16,6 +18,9 @@
           </li>
           <li class="nav-item">
             <%= link_to "New entry", new_entry_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Today's Entries", entries_by_date_path(:date => Date.today), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
