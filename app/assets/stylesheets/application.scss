@@ -13,3 +13,25 @@
 @import "components/index";
 @import "pages/index";
 @import "components/image_scroll";
+
+// Custom CSS to make the navbar and footer locate correctly for entire app
+html {
+  height:100%;
+  box-sizing: border-box;
+}
+
+body {
+  height:100%;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  height: 100%
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
