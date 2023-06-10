@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'user/update'
-  get 'inspirations/random'
   devise_for :users
   # Defines the root path route ("/")
   root "pages#home"
