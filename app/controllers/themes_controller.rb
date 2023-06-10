@@ -1,5 +1,8 @@
 class ThemesController < ApplicationController
   def index
+    @themes = []
+    Theme.where(user: current_user).reverse_each { |theme| @themes.push(theme) }
+    @current_theme = @themes.shift
   end
 
   def create
