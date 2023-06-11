@@ -2,6 +2,7 @@ require 'date'
 
 class EntriesController < ApplicationController
   def new
+    @mood = Mood.where(date: Date.today)
     @entry = Entry.new
   end
 
@@ -17,6 +18,7 @@ class EntriesController < ApplicationController
   end
 
   def show_by_date
+    @mood = Mood.where(date: Date.today)
     @date = Date.parse(params[:date])
     @entries_on_same_date = Entry.where(date: @date)
     @next_entry = Entry.where("date > ?", @date).order(date: :asc).first
