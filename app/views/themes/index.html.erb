@@ -1,22 +1,35 @@
-<div class="container mt-5">
-  <h1>Your Theme History</h1>
-  <div class="theme d-flex justify-content-between">
-    <div class="flex-grow-1">
-      <h2><strong>Current theme:</strong> <%= @current_theme.text %></h2>
-      <p class="m-0">This has been your theme since <strong><%= @current_theme.start.strftime("%e %B %Y") %></strong> and there are <strong><%= pluralize(@current_theme.entries.count, 'entry') %></strong> associated with this theme.</p>
-    </div>
-    <% unless @current_theme.entries.count.zero? %>
-      <%= link_to "View Entries", theme_path(@current_theme), id: "button-74", style: "margin-top: 5px; margin-bottom: 5px; padding-top: 10px;" %>
-    <% end %>
+<div class="banner d-flex align-items-center justify-content-center mb-3">
+  <div class="container m-5">
+    <h1 class="pb-2 text-center" data-inspiration-target="message">Theme history</h1>
   </div>
-  <% @themes.each do |theme| %>
+</div>
+
+<div class="container mt-5 mb-5">
+  <div class="mb-5">
+    <h2>Current theme</h2>
     <div class="theme d-flex justify-content-between">
       <div class="flex-grow-1">
-        <h2><%= theme.text %></h2>
-        <p class="m-0">From <strong><%= theme.start.strftime("%e %B %Y") %></strong> to <strong><%= theme.end.strftime("%e %B %Y") %></strong> with <strong><%= pluralize(theme.entries.count, 'entry') %></strong>.</p>
+        <h2><%= @current_theme.text %></h2>
+        <p class="m-0">This has been your theme since <strong><%= @current_theme.start.strftime("%e %B %Y") %></strong> and there are <strong><%= pluralize(@current_theme.entries.count, 'entry') %></strong> associated with this theme.</p>
       </div>
-      <% unless theme.entries.count.zero? %>
-        <%= link_to "View Entries", theme_path(theme), id: "button-74", style: "margin-top: 5px; margin-bottom: 5px; padding-top: 10px;" %>
+      <% unless @current_theme.entries.count.zero? %>
+        <%= link_to "View Entries", theme_path(@current_theme), id: "button-74", style: "margin-top: 5px; margin-bottom: 5px; padding-top: 10px;" %>
+      <% end %>
+    </div>
+  </div>
+  <% unless @themes.empty? %>
+    <div>
+      <h2>Past themes</h2>
+      <% @themes.each do |theme| %>
+        <div class="theme d-flex justify-content-between">
+          <div class="flex-grow-1">
+            <h2><%= theme.text %></h2>
+            <p class="m-0">From <strong><%= theme.start.strftime("%e %B %Y") %></strong> to <strong><%= theme.end.strftime("%e %B %Y") %></strong> with <strong><%= pluralize(theme.entries.count, 'entry') %></strong>.</p>
+          </div>
+          <% unless theme.entries.count.zero? %>
+            <%= link_to "View Entries", theme_path(theme), id: "button-74", style: "margin-top: 5px; margin-bottom: 5px; padding-top: 10px;" %>
+          <% end %>
+        </div>
       <% end %>
     </div>
   <% end %>
