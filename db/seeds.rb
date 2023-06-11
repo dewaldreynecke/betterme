@@ -14,6 +14,8 @@ Mood.destroy_all
 puts 'Moods removed.'
 Zenquote.destroy_all
 puts 'Zenquotes removed.'
+Address.destroy_all
+puts 'Addresses removed.'
 User.destroy_all
 puts 'Users removed.'
 puts ''
@@ -23,6 +25,19 @@ User.create(email: 'me@me.com', password: '123456', fullname: 'Jack Black')
 puts "...done. #{User.all.count} new user(s) created."
 puts 'Demo user has email: me@me.com'
 puts 'Demo user has password: 123456'
+puts ''
+
+puts 'Creating favourite addresses...'
+address = Address.new(name: 'Home', address: 'Esplanade Road, City of Cape Town, Western Cape 7441, South Africa')
+address.user = User.last
+address.save
+address = Address.new(name: 'Parents', address: '6 Hebron Street, Durbanville, Western Cape 7550, South Africa')
+address.user = User.last
+address.save
+address = Address.new(name: 'Work', address: 'Duminy Street, Parow, Western Cape 7500, South Africa')
+address.user = User.last
+address.save
+puts "...done. #{Address.all.count} addresses created for user #{User.last.fullname}."
 puts ''
 
 puts 'Creating themes...'

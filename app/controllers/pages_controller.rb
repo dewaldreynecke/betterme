@@ -21,4 +21,9 @@ class PagesController < ApplicationController
     @zenquote = Zenquote.all.sample
     @mood = Mood.where(date: Date.today)
   end
+
+  def profile
+    @user = current_user
+    @mood = Mood.where(date: Date.today)
+  end
 end
