@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'addresses/new'
-  get 'addresses/create'
-  get 'addresses/destroy'
   devise_for :users
   # Defines the root path route ("/")
   root "pages#home"
