@@ -3,14 +3,17 @@ class ThemesController < ApplicationController
     @themes = []
     Theme.where(user: current_user).reverse_each { |theme| @themes.push(theme) }
     @current_theme = @themes.shift
+    @mood = Mood.where(date: Date.today)
   end
 
   def show
     @theme = Theme.find(params[:id])
     @entries = @theme.entries
+    @mood = Mood.where(date: Date.today)
   end
 
   def create
+    @mood = Mood.where(date: Date.today)
     @user = current_user
     # set end date for the current theme
     @outgoing_theme = Theme.where(user: @user).last

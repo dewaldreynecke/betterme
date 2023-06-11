@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
+    @mood = Mood.where(date: Date.today)
   end
 
   def dashboard
@@ -18,5 +19,6 @@ class PagesController < ApplicationController
 
   def confirmation
     @zenquote = Zenquote.all.sample
+    @mood = Mood.where(date: Date.today)
   end
 end
