@@ -454,34 +454,34 @@ mood = Mood.new(mood: :awesome)
 mood.date = Date.new(2023, 6, 10)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :happy)
-mood.date = Date.new(2023, 6, 10)
-mood.user = User.last
-mood.save
-mood = Mood.new(mood: :bad)
-mood.date = Date.new(2023, 6, 11)
-mood.user = User.last
-mood.save
-mood = Mood.new(mood: :terrible)
-mood.date = Date.new(2023, 6, 12)
-mood.user = User.last
-mood.save
-mood = Mood.new(mood: :awesome)
-mood.date = Date.new(2023, 6, 13)
-mood.user = User.last
-mood.save
-mood = Mood.new(mood: :happy)
-mood.date = Date.new(2023, 6, 14)
-mood.user = User.last
-mood.save
-mood = Mood.new(mood: :okay)
-mood.date = Date.new(2023, 6, 15)
-mood.user = User.last
-mood.save
-mood = Mood.new(mood: :bad)
-mood.date = Date.new(2023, 6, 16)
-mood.user = User.last
-mood.save
+
+# The moods below are commented out to facilitate development,
+# but should be added back in before sending to production for demo.
+
+# mood = Mood.new(mood: :bad)
+# mood.date = Date.new(2023, 6, 11)
+# mood.user = User.last
+# mood.save
+# mood = Mood.new(mood: :terrible)
+# mood.date = Date.new(2023, 6, 12)
+# mood.user = User.last
+# mood.save
+# mood = Mood.new(mood: :awesome)
+# mood.date = Date.new(2023, 6, 13)
+# mood.user = User.last
+# mood.save
+# mood = Mood.new(mood: :happy)
+# mood.date = Date.new(2023, 6, 14)
+# mood.user = User.last
+# mood.save
+# mood = Mood.new(mood: :okay)
+# mood.date = Date.new(2023, 6, 15)
+# mood.user = User.last
+# mood.save
+# mood = Mood.new(mood: :bad)
+# mood.date = Date.new(2023, 6, 16)
+# mood.user = User.last
+# mood.save
 puts "#{Mood.all.count} moods created."
 puts ''
 
