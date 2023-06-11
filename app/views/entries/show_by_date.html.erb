@@ -9,14 +9,14 @@
       <div class="row">
         <div class="col-md-6 text-start">
           <% if @previous_entry %>
-            <%= link_to entries_by_date_path(date: @previous_entry.date), id: "button-74" do %>
+            <%= link_to entries_by_date_path(date: @previous_entry.date), id: "button-17" do %>
               <i class="fas fa-arrow-left"></i> Previous
             <% end %>
           <% end %>
         </div>
         <div class="col-md-6 text-end">
           <% if @next_entry %>
-            <%= link_to entries_by_date_path(date: @next_entry.date), id: "button-74" do %>
+            <%= link_to entries_by_date_path(date: @next_entry.date), id: "button-17" do %>
               Next <i class="fas fa-arrow-right"></i>
             <% end %>
           <% end %>
