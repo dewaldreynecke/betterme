@@ -2,7 +2,11 @@
   <div class="container m-5">
     <div class="text-center">
       <h1 class="pb-2"><%= @theme.text %></h1>
-      <p><%= @theme.start.strftime("%e %B %Y") %> to <%= @theme.end.strftime("%e %B %Y") %></p>
+      <% if @theme.end.nil? %>
+        <p>This is your current theme since <%= @theme.start.strftime("%e %B %Y") %>.</p>
+      <% else %>
+        <p><%= @theme.start.strftime("%e %B %Y") %> to <%= @theme.end.strftime("%e %B %Y") %></p>
+      <% end %>
     </div>
   </div>
 </div>
