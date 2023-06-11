@@ -30,7 +30,7 @@
     </div>
   </div>
   <div id="addresses">
-    <h2 class="mb-2">Addresses</h2>
+    <h2 class="mb-2">Saved Addresses</h2>
     <div class="section">
       <% unless @addresses.empty? %>
         <% @addresses.each do |address| %>
@@ -40,8 +40,15 @@
             <%= link_to "Delete", address_path(address), id: "button-74", style: "height: 42px; margin-right:0;", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         <% end %>
-        <p>Form to add addresses here.</p>
       <% end %>
+      <div class="address-single-line p-3">
+        <h5>Add an address to your Saved Addresses</h5>
+        <%= simple_form_for(@address) do |f| %>
+          <%= f.input :name, label: false, placeholder: "Name" %>
+          <%= f.input :address, label: false, placeholder: "Address" %>
+          <%= f.button :submit, id: "button-74" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

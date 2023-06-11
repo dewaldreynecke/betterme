@@ -26,5 +26,6 @@ class PagesController < ApplicationController
     @user = current_user
     @mood = Mood.where(date: Date.today)
     @addresses = @user.addresses
+    @address = Address.new
   end
 end
