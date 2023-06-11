@@ -31,18 +31,18 @@
   </div>
   <div id="addresses">
     <h2 class="mb-2">Saved Addresses</h2>
-    <div class="section">
+    <div class="section p-4">
       <% unless @addresses.empty? %>
         <% @addresses.each do |address| %>
-          <div class="d-flex justify-content-between align-items-center mb-2 address-single-line p-2 ps-3">
+          <div class="d-flex justify-content-between align-items-center mb-2 address-single-line p-4">
             <h5 class="m-0"><%= address.name %> : </h5>
             <p class="ms-2 mb-0 flex-grow-1"><%= address.address %></p>
             <%= link_to "Delete", address_path(address), id: "button-74", style: "height: 42px; margin-right:0;", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         <% end %>
       <% end %>
-      <div class="address-single-line p-3">
-        <h5>Add an address to your Saved Addresses</h5>
+      <h5 class="mt-5 ms-4">Add an address to your Saved Addresses</h5>
+      <div class="address-single-line p-4">
         <%= simple_form_for(@address) do |f| %>
           <%= f.input :name, label: false, placeholder: "Name" %>
           <%= f.input :address, label: false, placeholder: "Address", input_html: { rows: "1" } %>
