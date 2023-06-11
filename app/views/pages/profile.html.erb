@@ -32,7 +32,16 @@
   <div id="addresses">
     <h2 class="mb-2">Addresses</h2>
     <div class="section">
-      <p>TODO: add the addresses here as soon as that feature branch is merged.</p>
+      <% unless @addresses.empty? %>
+        <% @addresses.each do |address| %>
+          <div class="d-flex justify-content-between align-items-center mb-2 address-single-line p-2 ps-3">
+            <h5 class="m-0"><%= address.name %> : </h5>
+            <p class="ms-2 mb-0 flex-grow-1"><%= address.address %></p>
+            <%= link_to "Delete", address_path(address), id: "button-74", style: "height: 42px; margin-right:0;", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          </div>
+        <% end %>
+        <p>Form to add addresses here.</p>
+      <% end %>
     </div>
   </div>
 </div>
