@@ -23,7 +23,9 @@
           <p class="m-0"><%= @mood.first.mood.capitalize %></p>
         <% end %>
       </div>
-      <%= link_to "Reset mood", "#", id: "button-74", style: "height:42px;" %>
+      <% unless @mood.empty? %>
+        <%= link_to "Reset mood", reset_mood_path(@mood.first), id: "button-74", style: "height:42px;" %>
+      <% end %>
     </div>
   </div>
   <div id="addresses">
