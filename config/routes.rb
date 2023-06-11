@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'addresses/new'
+  get 'addresses/create'
+  get 'addresses/destroy'
   devise_for :users
   # Defines the root path route ("/")
   root "pages#home"
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
   resources :moods, only: [:new]
   resources :user, only: [:update]
   resources :themes, only: %i[create index show]
+  resources :addresses, only: %i[create destroy]
 
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 end
