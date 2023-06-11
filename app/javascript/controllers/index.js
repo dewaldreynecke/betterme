@@ -10,6 +10,9 @@ application.register("address-autocomplete", AddressAutocompleteController)
 import EditTitleController from "./edit_title_controller"
 application.register("edit-title", EditTitleController)
 
+import FavouriteAddressController from "./favourite_address_controller"
+application.register("favourite-address", FavouriteAddressController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
