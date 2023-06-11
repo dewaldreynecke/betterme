@@ -1,24 +1,24 @@
-<div class="banner d-flex align-items-center justify-content-center" style="background-color: #D7F0F5">
+<div class="banner d-flex align-items-center justify-content-center">
   <div class="container m-5">
     <div class="text-center">
-      <h1 class="pb-2">My Journal Entries</h1>
       <% if @entries_on_same_date.any? %>
           <h3><%= @entries_on_same_date.first.date.strftime("%B %d, %Y") %></h3>
       <% end %>
+      <h1 class="pb-2 mt-5">My Journal Entries</h1>
       </div>
       <div class="row">
         <div class="col-md-6 text-start">
           <% if @previous_entry %>
-            <%= link_to entries_by_date_path(date: @previous_entry.date) do %>
-              <i class="fas fa-arrow-left"></i> Previous Entry
+            <%= link_to entries_by_date_path(date: @previous_entry.date), id: "button-17" do %>
+              <i class="fas fa-arrow-left"></i> Previous
             <% end %>
           <% end %>
         </div>
         <div class="col-md-6 text-end">
           <% if @next_entry %>
-            <%= link_to entries_by_date_path(date: @next_entry.date) do %>
-              Next Entry <i class="fas fa-arrow-right"></i>
-             <% end %>
+            <%= link_to entries_by_date_path(date: @next_entry.date), id: "button-17" do %>
+              Next <i class="fas fa-arrow-right"></i>
+            <% end %>
           <% end %>
         </div>
       </div>
