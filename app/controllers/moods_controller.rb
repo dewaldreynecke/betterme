@@ -15,4 +15,10 @@ class MoodsController < ApplicationController
       end
     end
   end
+
+  def reset
+    @mood = Mood.find(params[:id])
+    @mood.destroy
+    redirect_to profile_path
+  end
 end
