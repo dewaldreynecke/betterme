@@ -26,7 +26,7 @@
                   label: false,
                   input_html: { rows: "14" },
                   wrapper_html: { class: "me-4 flex-grow-1" } %>
-      <div>
+      <div class="sidebar">
         <div class="d-flex">
           <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false %>
         </div>
@@ -35,6 +35,11 @@
                     input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
                     wrapper_html: {data: {controller: "address-autocomplete",
                                           address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+        <div class="addresses">
+          <% @addresses.each do |address| %>
+            <a href="" class="btn btn-primary"><%= address.name %></a>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="d-flex justify-content-center mt-4">

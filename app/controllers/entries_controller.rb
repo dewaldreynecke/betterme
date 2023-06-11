@@ -3,6 +3,7 @@ require 'date'
 class EntriesController < ApplicationController
   def new
     @entry = Entry.new
+    @addresses = current_user.addresses.all
   end
 
   def create
