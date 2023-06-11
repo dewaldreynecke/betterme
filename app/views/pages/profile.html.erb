@@ -20,7 +20,8 @@
         <% if @mood.empty? %>
           <p class="m-0"><em>You have not picked a mood for today.</em></p>
         <% else %>
-          <p class="m-0"><%= @mood.first.mood.capitalize %></p>
+          <%= image_tag "#{@mood.first.mood.capitalize}.png", class: "avatar" %>
+          <span class="m-0 ms-3"><%= @mood.first.mood.capitalize %></span>
         <% end %>
       </div>
       <% unless @mood.empty? %>
