@@ -1,0 +1,10 @@
+.addresses {
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  grid-auto-flow: row dense;
+}
+
+.sidebar {
+  width: 310px;
+}
