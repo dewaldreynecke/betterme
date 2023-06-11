@@ -10,7 +10,8 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.user = current_user
     @entry.date = Date.today
-    if @entry.save
+    @entry.theme = current_user.themes.last
+    if @entry.save!
       redirect_to confirmation_path
     else
       render new_entry_path, status: :unprocessable_entity
