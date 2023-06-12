@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import Typed from "typed.js"
 
 // Connects to data-controller="inspiration"
 export default class extends Controller {
@@ -15,7 +16,12 @@ export default class extends Controller {
     .then((data) => {
       // replace the text in textTarget
       const sentence = this.#decodeHtml(data)
-      this.messageTarget.innerText = sentence
+      new Typed(this.messageTarget, {
+        strings: [sentence],
+        typeSpeed: 50,
+        loop: false,
+        showCursor: false
+      })
     })
   }
 
