@@ -1,0 +1,5 @@
+meta_name: "BetterMe"
+meta_title: "Betterme - Your Daily Journal Companion"
+meta_description: "Improve your mental health through journalling and mood tracking."
+meta_image: "betterme.jpg" # should exist in `app/assets/images/`
+twitter_account: "@dewaldreynecke"   # required for Twitter Cards
