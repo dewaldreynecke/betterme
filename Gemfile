@@ -63,6 +63,7 @@ gem "cloudinary"
 gem "simple_calendar", "~> 2.4"
 gem "geocoder"
 gem "chartkick"
+gem "groupdate"
 # ------------------------------------------------------------------------------
 
 group :development, :test do
