@@ -1,44 +1,62 @@
-.simple-calendar {
-
-  table {
-    border-collapse: collapse;
-    border-style: hidden; /* hide standard table (collapsed) border */
-    box-shadow: 0 0 0 1px #666; /* this draws the table border  */
-    width: 600px;
+.card {
+  padding: 20px;
+  border-radius: 20px;
 }
 
-  td {
-    border: none;
+.calendar {
+  width: 467px;
+  max-width: 467px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.days {
+  display: grid;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  color: black;
+  #cal-awesome {
+    background-color: #C4DEBB;
   }
 
-  .day {
-    background-color: white;
-    text-align: center;
-    vertical-align: middle;
+  #cal-happy {
+    background-color: #FBA996;
   }
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
-
-  .today {
-    background-color: #9CA891;
-    border-radius:50%;
+  #cal-okay {
+    background-color: #F8E9B1;
   }
-  .past {}
-  .future {}
 
-  .start-date {}
-
-  .prev-month {
-    color: black;
+  #cal-bad {
+    background-color: #ABDEE9;
   }
-  .next-month { }
-  .current-month {}
 
-  .has-events {}
+  #cal-terrible {
+    background-color: #DB6868;
+  }
+
+  #cal-none {
+    background-color: #ffffff;
+  }
+}
+
+.date {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: black;
 }
