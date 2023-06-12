@@ -27,7 +27,9 @@
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <% unless @mood.empty? %>
+            <% if @mood.empty? %>
+              <%= image_tag "Nomood.png", class: "avatar", alt: "dropdown menu" %>
+            <% else %>
               <%= image_tag "#{@mood.first.mood.capitalize}.png", class: "avatar", alt: "dropdown menu" %>
             <% end %>
           </a>
