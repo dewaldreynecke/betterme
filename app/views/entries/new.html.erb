@@ -43,7 +43,7 @@
           <% unless @addresses.nil? %>
             <% @addresses.each do |address| %>
               <a href=""
-                class="btn btn-secondary"
+                class="button-17"
                 data-favourite-address-target="btn"
                 data-action="click->favourite-address#clickHandler"
                 data-address="<%= address.address %>"
@@ -56,8 +56,8 @@
       </div>
     </div>
     <div class="d-flex justify-content-center mt-4">
-      <%= f.submit class: "me-4", id: "button-74"%>
-      <%= link_to "Cancel", dashboard_path, id: "button-17" %>
+      <%= f.submit class: "button-74 me-4"%>
+      <%= link_to "Cancel", dashboard_path, class: "button-17" %>
     </div>
   <% end %>
 </div>
