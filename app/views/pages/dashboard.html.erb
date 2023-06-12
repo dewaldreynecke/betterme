@@ -1,6 +1,7 @@
 <%= render "banner" %>
 
 <div class="container mt-4">
+  <%# MOOD BOX %>
   <div data-controller="mood" >
     <div class="moodcard" data-mood-target="moodcard">
       <% if @mood.empty? %>
@@ -11,6 +12,12 @@
     </div>
   </div>
 
+  <%# CHART %>
+  <div>
+    <%= render partial: "shared/mood_chart" %>
+  </div>
+
+  <%# CALENDAR AND MAP side-by-side %>
   <div class="d-flex justify-content-between mt-4">
     <div class="container">
       <%= month_calendar do |date| %>
