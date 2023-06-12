@@ -9,10 +9,19 @@ export default class extends Controller {
 
   clickHandler(event) {
     event.preventDefault()
+    // save the address in the form field
     this.addressTarget.value = event.target.dataset.address
 
-    // nextElementSibling
-    this.btnTarget.classList.remove("btn-secondary")
-    this.btnTarget.classList.add("btn-primary")
+    // iterate through the buttons to activate the clicked one
+    // and deactivate the others
+    this.btnTargets.forEach(function (element) {
+      if (element.dataset.name === event.target.dataset.name) {
+        element.classList.remove("button-17")
+        element.classList.add("button-74")
+      } else {
+        element.classList.remove("button-74")
+        element.classList.add("button-17")
+      }
+    })
   }
 }
