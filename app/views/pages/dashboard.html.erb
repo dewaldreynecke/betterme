@@ -19,12 +19,9 @@
 
   <%# CALENDAR AND MAP side-by-side %>
   <div class="d-flex justify-content-between mt-4">
-    <div class="container">
-      <%= month_calendar do |date| %>
-        <%= date.day %>
-      <% end %>
-    </div>
-
+    <%# calendar %>
+    <%= render "calendar" %>
+    <%# map %>
     <div style="width:800px; height:467px"
       data-controller="map"
       id="map-dashboard"
