@@ -38,7 +38,7 @@ class PagesController < ApplicationController
     mood_map = { "terrible" => 0, "bad" => 1, "okay" => 2, "happy" => 3, "awesome" => 4 }
     return_array = []
     current_user.moods.each do |mood|
-      return_array.push([mood.date.strftime("%Y-%e-%m"), mood_map[mood.mood]])
+      return_array.push([mood.date.strftime("%Y-%m-%d"), mood_map[mood.mood]])
     end
     return return_array
   end

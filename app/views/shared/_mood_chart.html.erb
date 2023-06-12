@@ -1,1 +1,9 @@
-<%= line_chart chart_data %>
+<%= line_chart chart_data,
+    discrete: true,
+    label: "Mood",
+    xtitle: "Day",
+    ytitle: "Mood",
+    loading: "Loading mood data...",
+    empty: "No mood history",
+    download: true,
+    colors: ["#33372F", "#666"] %>
