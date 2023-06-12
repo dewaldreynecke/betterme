@@ -15,6 +15,7 @@ class PagesController < ApplicationController
     @mood = Mood.where(date: Date.today)
     @current_theme = Theme.where(user: current_user).last
     @theme = Theme.new
+    @chart_data = chart_builder
   end
 
   def confirmation
@@ -27,5 +28,18 @@ class PagesController < ApplicationController
     @mood = Mood.where(date: Date.today)
     @addresses = @user.addresses
     @address = Address.new
+  end
+
+  private
+
+  def chart_builder
+    # return an array of data points like this:
+    # [["21 May 2023", 2], ["8 June 2023", 3], ["2021-01-03", 1]]
+    mood_map = { "terrible" => 0, "bad" => 1, "okay" => 2, "happy" => 3, "awesome" => 4 }
+    return_array = []
+    current_user.moods.min(14).each do |mood|
+      return_array.push([mood.date.strftime("%e %b"), mood_map[mood.mood]])
+    end
+    return return_array
   end
 end
