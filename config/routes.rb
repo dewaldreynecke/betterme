@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
   get '/confirmation', to: 'pages#confirmation', as: 'confirmation'
-  get '/inspiration/random', to: 'inspiration#random', as: 'random_inspiration'
+  get '/inspirations/random', to: 'inspirations#random', as: 'random_inspiration'
   get '/profile', to: 'pages#profile', as: 'profile'
   get '/moods/reset/:id', to: 'moods#reset', as: 'reset_mood'
 
