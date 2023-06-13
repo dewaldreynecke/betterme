@@ -1,9 +1,14 @@
 <div class="col-lg-6 h-100 mt-4">
-  <div class="card mb-3 rounded-5">
-    <div class="card-body">
-      <h3><%= title %></h3><h6><%= date %></h6>
-      <h6><i class="fa-solid fa-location-dot"></i> <%= address %></h6>
-      <p><%= content %></p>
+  <div class="ec-card d-flex flex-column">
+    <% unless photo.nil? %>
+      <%= cl_image_tag photo.key, class: "ec-photo" %>
+    <% end %>
+    <div class="ec-body">
+      <h3 class="ec-title"><%= title %></h3>
+      <p class="ec-details-text"><%= date %></p>
+      <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= address %></p>
+      <hr class="ec-hr">
+      <p class="ec-content"><%= content %></p>
     </div>
   </div>
 </div>
