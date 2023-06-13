@@ -19,8 +19,10 @@
     <% end %>
     <div class="ec-body">
       <h3 class="ec-title"><%= title %></h3>
-      <p class="ec-details-text"><%= date %></p>
-      <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= address %></p>
+      <p class="ec-details-text"><%= date.strftime("%e %B %Y") %></p>
+      <% unless address.empty? %>
+        <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= address %></p>
+      <% end %>
       <hr class="ec-hr">
       <p><%= content %></p>
     </div>
