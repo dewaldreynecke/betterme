@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_13_163610) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_13_164125) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_13_163610) do
     t.bigint "theme_id", null: false
     t.index ["theme_id"], name: "index_entries_on_theme_id"
     t.index ["user_id"], name: "index_entries_on_user_id"
+  end
+
+  create_table "entries_tags", id: false, force: :cascade do |t|
+    t.bigint "entry_id", null: false
+    t.bigint "tag_id", null: false
+    t.index ["entry_id"], name: "index_entries_tags_on_entry_id"
+    t.index ["tag_id"], name: "index_entries_tags_on_tag_id"
   end
 
   create_table "inspirations", force: :cascade do |t|
