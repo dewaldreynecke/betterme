@@ -15,7 +15,10 @@ class PagesController < ApplicationController
     @mood = Mood.where(date: Date.today)
     @current_theme = Theme.where(user: current_user).last
     @theme = Theme.new
+    @user = current_user
+    @moods = @user.moods
     @chart_data = chart_builder
+    @entries = current_user.entries.max(2)
   end
 
   def confirmation

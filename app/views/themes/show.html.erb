@@ -15,7 +15,7 @@
   <h2><%= pluralize(@theme.entries.count, 'entry') %> for this theme</h2>
   <div class="row">
     <% @entries.each do |entry| %>
-      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content } %>
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos } %>
     <% end %>
   </div>
 </div>

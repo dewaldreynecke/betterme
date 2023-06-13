@@ -1,4 +1,14 @@
-<%= render "banner" %>
+<div class="banner align-items-center text-center">
+  <h3 class="banner-date"><%= Date.today.strftime("%B %d, %Y") %></h3>
+  <div id="theme" class="d-flex justify-content-center" data-controller="theme">
+    <h1 class="pb-2" data-theme-target="themeheader"><%= @current_theme.text %></h1>
+    <%= simple_form_for(@theme, html: { class: "d-none", data: {theme_target: "themeform", novalidate: true} }) do |f| %>
+      <%= f.input :text, input_html: { data: {theme_target: "themeinput"}}, label: "Change your theme to something new" %>
+      <%= f.submit %>
+    <% end %>
+    <p data-theme-target="editbutton" data-action="click->theme#displayForm"><i class="fa-solid fa-pen"></i></p>
+  </div>
+</div>
 
 <div class="container mt-4">
   <%# MOOD BOX %>
@@ -19,15 +29,23 @@
   </div>
 
   <%# CALENDAR AND MAP side-by-side %>
-  <div class="d-flex justify-content-between mt-4">
+  <div class="d-flex justify-content-between calendar-map-box">
     <%# calendar %>
-    <%= render "calendar" %>
+      <%= render partial: "calendar" %>
     <%# map %>
-    <div style="width:800px; height:467px"
+    <div style="width:800px; height:350px"
       data-controller="map"
       id="map-dashboard"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+  </div>
+
+  <%# LAST FEW ENTRIES %>
+  <h2>Your last two entries</h2>
+  <div class="entries-box">
+    <% @entries.each do |entry| %>
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos } %>
+    <% end %>
   </div>
 </div>
