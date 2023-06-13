@@ -1,62 +1,68 @@
-.card {
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.calendar {
-  width: 467px;
-  max-width: 467px;
-}
-
-h1 {
-  text-align: center;
-}
-
-.days {
-  display: grid;
-}
-
-.day {
-  text-align: center;
-  padding: 10px;
-}
-
-.dates {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  color: black;
-  #cal-awesome {
-    background-color: #C4DEBB;
+#calendar-dashboard {
+  .card {
+    border-radius: 20px;
+    margin-right: 40px;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 2px 20px grey;
   }
 
-  #cal-happy {
-    background-color: #FBA996;
+  .calendar {
+    width: 467px;
+    max-width: 467px;
   }
 
-  #cal-okay {
-    background-color: #F8E9B1;
+  h1 {
+    text-align: center;
   }
 
-  #cal-bad {
-    background-color: #ABDEE9;
+  .days {
   }
 
-  #cal-terrible {
-    background-color: #DB6868;
+  .day {
+    text-align: center;
+    padding: 10px;
   }
 
-  #cal-none {
-    background-color: #ffffff;
-  }
-}
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    color: black;
+    #cal-awesome {
+      background-color: #C4DEBB;
+    }
 
-.date {
-  height: 30px;
-  width: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: black;
+    #cal-happy {
+      background-color: #FBA996;
+    }
+
+    #cal-okay {
+      background-color: #F8E9B1;
+    }
+
+    #cal-bad {
+      background-color: #ABDEE9;
+    }
+
+    #cal-terrible {
+      background-color: #DB6868;
+    }
+
+    #cal-none {
+      background-color: #ffffff;
+    }
+  }
+
+  .date {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+  }
 }
