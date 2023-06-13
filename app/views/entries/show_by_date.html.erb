@@ -41,7 +41,7 @@
   </div>
 
 
-  <% if @entries_on_same_date.all? { |entry| entry.photos.any? } %>
+  <% if @entries_on_same_date.any? { |entry| entry.photos.present? } %>
     <div class="scroll-container d-flex justify-content-between mb-4">
       <% @entries_on_same_date.each do |entry| %>
         <% if entry.photos.any? %>

@@ -13,8 +13,9 @@
   </div>
 
   <%# CHART %>
+  <h2>How You Have Been Doing?</h2>
   <div>
-    <%= render partial: "shared/mood_chart" %>
+    <%= render partial: "shared/mood_chart", locals: {chart_data: @chart_data} %>
   </div>
 
   <%# CALENDAR AND MAP side-by-side %>
