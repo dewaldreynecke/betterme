@@ -1,4 +1,14 @@
-<%= render "banner" %>
+<div class="banner align-items-center text-center">
+  <h3 class="banner-date"><%= Date.today.strftime("%B %d, %Y") %></h3>
+  <div id="theme" class="d-flex justify-content-center" data-controller="theme">
+    <h1 class="pb-2" data-theme-target="themeheader"><%= @current_theme.text %></h1>
+    <%= simple_form_for(@theme, html: { class: "d-none", data: {theme_target: "themeform", novalidate: true} }) do |f| %>
+      <%= f.input :text, input_html: { data: {theme_target: "themeinput"}}, label: "Change your theme to something new" %>
+      <%= f.submit %>
+    <% end %>
+    <p data-theme-target="editbutton" data-action="click->theme#displayForm"><i class="fa-solid fa-pen"></i></p>
+  </div>
+</div>
 
 <div class="container mt-4">
   <%# MOOD BOX %>
@@ -19,7 +29,7 @@
   </div>
 
   <%# CALENDAR AND MAP side-by-side %>
-  <div class="d-flex justify-content-between map-cal">
+  <div class="d-flex justify-content-between calendar-map-box">
     <%# calendar %>
       <%= render partial: "calendar" %>
     <%# map %>
