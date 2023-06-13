@@ -28,17 +28,7 @@
 <div class="container">
   <div class="row" id="entries">
     <% @entries_on_same_date.each do |entry| %>
-      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photo: entry.photos.first } %>
-      <%# Previous card, now replaced by partial %>
-      <!-- <div class="col-lg-6 h-100 mt-4">
-        <div class="card mb-3 rounded-5">
-          <div class="card-body">
-            <h3><%= entry.title %></h3><h6><%= entry.date.strftime("%I:%M%p") %></h6>
-            <h6><i class="fa-solid fa-location-dot"></i> <%= entry.address %></h6>
-            <p><%= entry.content %></p>
-          </div>
-        </div>
-      </div> -->
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos } %>
     <% end %>
   </div>
 
