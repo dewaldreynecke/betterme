@@ -1,6 +1,8 @@
 <div class="col-lg-6 h-100 mt-4">
   <div class="ec-card d-flex flex-column">
-    <% unless photo.nil? %>
+    <% if photo.nil? %>
+      <img class="ec-photo" src="https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686319692/production/mxjxtih0815dh36gtmiptblpkz8d.jpg" alt="default placeholder image">
+    <% else %>
       <%= cl_image_tag photo.key, class: "ec-photo" %>
     <% end %>
     <div class="ec-body">
