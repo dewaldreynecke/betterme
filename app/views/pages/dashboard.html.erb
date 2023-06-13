@@ -19,11 +19,11 @@
   </div>
 
   <%# CALENDAR AND MAP side-by-side %>
-  <div class="d-flex justify-content-between mt-4">
+  <div class="d-flex justify-content-between map-cal">
     <%# calendar %>
-    <%= render "calendar" %>
+      <%= render partial: "calendar" %>
     <%# map %>
-    <div style="width:800px; height:467px"
+    <div style="width:800px; height:350px"
       data-controller="map"
       id="map-dashboard"
       data-map-markers-value="<%= @markers.to_json %>"
