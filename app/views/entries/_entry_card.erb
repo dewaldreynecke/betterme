@@ -1,9 +1,21 @@
 <div class="col-lg-6 h-100 mt-4">
   <div class="ec-card d-flex flex-column">
-    <% if photo.nil? %>
+    <% if photos.empty? %>
       <img class="ec-photo" src="https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686319692/production/mxjxtih0815dh36gtmiptblpkz8d.jpg" alt="default placeholder image">
     <% else %>
-      <%= cl_image_tag photo.key, class: "ec-photo" %>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= cl_image_tag photos.first.key, class: "ec-photo d-block w-100" %>
+          </div>
+          <% photos.each do |photo| %>
+            <% next if photo == photos.first %>
+            <div class="carousel-item">
+              <%= cl_image_tag photo.key, class: "ec-photo d-block w-100" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     <% end %>
     <div class="ec-body">
       <h3 class="ec-title"><%= title %></h3>
