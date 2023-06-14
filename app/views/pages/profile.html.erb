@@ -51,4 +51,29 @@
       </div>
     </div>
   </div>
+  <div id="tags">
+    <h2 class="mb-2">Tags</h2>
+    <div class="section">
+      <% unless @tags.empty? %>
+        <p>(Click a tag to delete it)</p>
+        <div class="tag-grid">
+          <% @tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag),
+                        id: "button-74",
+                        style: "height: 42px; margin-right:0;",
+                        data: {turbo_method: :delete,
+                        turbo_confirm: "Are you sure you want to delete tag '#{tag.name}'?"} %>
+          <% end %>
+        </div>
+      <% end %>
+      <div class="tag-form p-4">
+        <%= simple_form_for(@tag) do |f| %>
+          <%= f.input :name,
+                       label: false,
+                       placeholder: "New tag name" %>
+          <%= f.button :submit, id: "button-74" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
