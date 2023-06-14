@@ -53,8 +53,9 @@
             <% end %>
           <% end %>
         </div>
-        <div class="tags">
-          <%= f.association :tags, as: :check_boxes %>
+        <div class="tags" data-controller="tagtoggle">
+          <%= f.association :tags,
+                             as: :check_boxes %>
         </div>
       </div>
     </div>

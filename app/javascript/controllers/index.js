@@ -25,5 +25,8 @@ application.register("map", MapController)
 import MoodController from "./mood_controller"
 application.register("mood", MoodController)
 
+import TagtoggleController from "./tagtoggle_controller"
+application.register("tagtoggle", TagtoggleController)
+
 import ThemeController from "./theme_controller"
 application.register("theme", ThemeController)
