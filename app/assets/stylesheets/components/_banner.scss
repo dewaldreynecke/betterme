@@ -1,9 +1,42 @@
 .banner {
-  background-color: #9CA891;
+  background-image: linear-gradient(rgba(156, 168, 145, 0.90), rgba(156, 168, 145, 0.90)), url("zen_7.jpg");
+  background-position: center;
+  background-size: cover;
   box-shadow: 0px 2px 20px grey;
   height: 300px;
   margin-bottom: 100px;
   border-radius: 0 0 20px 20px;
+}
+
+.banner-new {
+  background-image: linear-gradient(rgba(156, 168, 145, 0.90), rgba(156, 168, 145, 0.90)), url("zen_5.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 2px 20px grey;
+  height: 300px;
+  margin-bottom: 100px;
+  border-radius: 0 0 20px 20px;
+}
+
+.banner-show {
+  background-image: linear-gradient(rgba(156, 168, 145, 0.90), rgba(156, 168, 145, 0.90)), url("zen_3.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 2px 20px grey;
+  height: 300px;
+  margin-bottom: 100px;
+  border-radius: 0 0 20px 20px;
+}
+
+.banner-theme {
+  background-image: linear-gradient(rgba(156, 168, 145, 0.90), rgba(156, 168, 145, 0.90)), url("zen_9.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 2px 20px grey;
+  height: 300px;
+  margin-bottom: 100px;
+  border-radius: 0 0 20px 20px;
+  font-size: 55px;
 }
 
 #theme {
