@@ -33,6 +33,11 @@ class PagesController < ApplicationController
     @address = Address.new
   end
 
+  def search
+    @mood = Mood.where(date: Date.today)
+    @results = Entry.search_by_entry(params[:query])
+  end
+
   private
 
   def chart_builder

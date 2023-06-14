@@ -49,3 +49,15 @@
     <% end %>
   </div>
 </div>
+
+<h2>Search your Entries</h2>
+    <div style="padding-right: 53px;">
+      <%= form_with url: search_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search by keyword or location:"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+    </div>
