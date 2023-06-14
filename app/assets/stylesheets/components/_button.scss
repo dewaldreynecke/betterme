@@ -148,3 +148,40 @@
   background: #b7cebc;
   color: #181A17;
 }
+
+#button-74-inspo {
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #9ca891;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: #181A17;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 35px;
+}
+
+#button-74-inspo:hover {
+  background-color: #dedede;
+}
+
+#button-74-inspo:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 920px) {
+  #button-74-inspo {
+    min-width: 120px;
+    padding: 0 25px;
+    margin-right: 17px;
+  }
+}
