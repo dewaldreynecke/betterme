@@ -1,11 +1,9 @@
 <h1>Entries at this location</h1>
 
-<% @entries.each do |entry| %>
+<% @entries_on_same_location.each do |entry| %>
   <div>
     <h3><%= entry.title %></h3>
     <p><%= entry.content %></p>
 
   </div>
 <% end %>
-
-

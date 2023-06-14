@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   resources :addresses, only: %i[create destroy]
 
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
-  get '/entries/location/:lat/:lng', to: 'entries#show_by_location', as: 'entries_by_location'
+  get 'entries/:latitude/:longitude', to: 'entries#show_by_location', as: 'entries_by_location'
 end
