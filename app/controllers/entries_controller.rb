@@ -29,6 +29,21 @@ class EntriesController < ApplicationController
       {
         lat: entry.latitude, lng: entry.longitude
       }
+
+    end
+  end
+
+
+  def show_by_location
+    latitude = params[:latitude].to_f
+    longitude = params[:longitude].to_f
+    radius = 10
+
+    @entries_on_same_location = Entry.where(lat: params[:lat], lng: params[:lng])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @entries } # Respond with JSON data
     end
   end
 
