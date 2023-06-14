@@ -10,7 +10,7 @@
 <div class="container mt-5">
   <%= simple_form_for(@entry) do |f| %>
     <div class="d-flex" data-controller="edit-title">
-      <h4 data-edit-title-target="heading">Journal Entry</h4>
+      <h4 data-edit-title-target="heading">Journal entry</h4>
       <%= f.input :title,
                   label: false,
                   wrapper_html: { class: "me-3" },
@@ -52,6 +52,10 @@
               </a>
             <% end %>
           <% end %>
+        </div>
+        <div class="tags" data-controller="tagtoggle">
+          <%= f.association :tags,
+                             as: :check_boxes %>
         </div>
       </div>
     </div>

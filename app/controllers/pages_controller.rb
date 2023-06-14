@@ -31,6 +31,8 @@ class PagesController < ApplicationController
     @mood = Mood.where(date: Date.today)
     @addresses = @user.addresses
     @address = Address.new
+    @tags = @user.tags
+    @tag = Tag.new
   end
 
   private

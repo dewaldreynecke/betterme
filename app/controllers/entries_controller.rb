@@ -5,6 +5,8 @@ class EntriesController < ApplicationController
     @mood = Mood.where(date: Date.today)
     @entry = Entry.new
     @addresses = current_user.addresses.all
+    # @tags = current_user.tags
+    # @tag = Tag.new
   end
 
   def create
@@ -35,6 +37,6 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:title, :content, :address, photos: [])
+    params.require(:entry).permit(:title, :content, :address, photos: [], tag_ids: [])
   end
 end

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :user, only: [:update]
   resources :themes, only: %i[create index show]
   resources :addresses, only: %i[create destroy]
+  resources :tags, only: %i[create destroy show]
 
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 end

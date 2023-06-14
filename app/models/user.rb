@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :moods
   has_many :themes
   has_many :addresses
+  has_many :tags
 end

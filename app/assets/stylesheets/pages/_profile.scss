@@ -10,3 +10,14 @@
   background-color: white;
   border-radius: 30px;
 }
+
+.tag-grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tag-form {
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 15px;
+}
