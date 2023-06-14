@@ -5,6 +5,8 @@ class EntriesController < ApplicationController
     @mood = Mood.where(date: Date.today)
     @entry = Entry.new
     @addresses = current_user.addresses.all
+    @tags = current_user.tags
+    @tag = Tag.new
   end
 
   def create
