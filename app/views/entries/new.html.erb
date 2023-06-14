@@ -10,13 +10,13 @@
 <div class="container mt-5">
   <%= simple_form_for(@entry) do |f| %>
     <div class="d-flex" data-controller="edit-title">
-      <h4 data-edit-title-target="heading">My journal entry</h4>
+      <h4 data-edit-title-target="heading">Journal entry</h4>
       <%= f.input :title,
                   label: false,
                   wrapper_html: { class: "me-3" },
                   input_html: { class: "d-none",
                                 size: "60",
-                                value: "My journal entry",
+                                value: "Journal entry",
                                 data: {edit_title_target: "form" } } %>
       <p data-edit-title-target="edit" data-action="click->edit-title#displayForm"><i class="fa-solid fa-pen"></i></p>
       <p class="d-none" data-edit-title-target="check" data-action="click->edit-title#hideForm"><i class="fa-solid fa-check"></i></p>
@@ -60,5 +60,4 @@
       <%= link_to "Cancel", dashboard_path, class: "button-17" %>
     </div>
   <% end %>
-  <% raise %>
 </div>
