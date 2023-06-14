@@ -1,0 +1,7 @@
+<div class="container">
+  <div id="search-results">
+    <% @results.each do |entry| %>
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos } %>
+    <% end %>
+  </div>
+</div>

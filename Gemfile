@@ -64,6 +64,7 @@ gem "simple_calendar", "~> 2.4"
 gem "geocoder"
 gem "chartkick"
 gem "groupdate"
+gem "pg_search"
 # ------------------------------------------------------------------------------
 
 group :development, :test do
