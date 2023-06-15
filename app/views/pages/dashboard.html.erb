@@ -10,9 +10,9 @@
   </div>
 </div>
 
-<div class="container mt-4">
+<div class="container mt-4" data-controller="mood">
   <%# MOOD BOX %>
-  <div data-controller="mood" >
+  <div>
     <div class="moodcard" data-mood-target="moodcard">
       <% if @mood.empty? %>
         <%= render "mood" %>
