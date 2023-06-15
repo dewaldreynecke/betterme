@@ -28,7 +28,7 @@
 <div class="container">
   <div class="row" id="entries">
     <% @entries_on_same_date.each do |entry| %>
-      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos } %>
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos, tags: entry.tags } %>
     <% end %>
   </div>
 
