@@ -12,3 +12,42 @@
 .content-box {
   border-radius: 20px !important;
 }
+
+.tag-base {
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #7bb6c4;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  color: #888888;
+  cursor: pointer;
+  // display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 6px 12px;
+  // line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  // user-select: none;
+  // -webkit-user-select: none;
+}
+
+.tag-base:hover {
+  background-color: #D7F0F5;
+}
+
+.tag-selected {
+  box-shadow: none;
+  background-color: #ABDEE9;
+  color: black;
+}
+
+.form-check {
+  padding: 0 !important;
+}
+
+.tag-container {
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-auto-flow: row dense;
+}

@@ -43,7 +43,7 @@
           <% unless @addresses.nil? %>
             <% @addresses.each do |address| %>
               <a href=""
-                class="button-17"
+                class="tag-base"
                 data-favourite-address-target="btn"
                 data-action="click->favourite-address#clickHandler"
                 data-address="<%= address.address %>"
@@ -53,10 +53,13 @@
             <% end %>
           <% end %>
         </div>
+        <p>Tags</p>
         <div class="tags" data-controller="tagtoggle">
           <%= f.association :tags,
+                             label: false,
                              as: :check_boxes,
-                             input_html: { class: "d-none" } %>
+                             input_html: { class: "d-none" },
+                             wrapper_html: { class: "tag-container" } %>
         </div>
       </div>
     </div>
