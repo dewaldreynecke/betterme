@@ -42,7 +42,7 @@
   </div>
 
   <%# LAST FEW ENTRIES %>
-  <h2 class="mb-5">Your last two entries</h2>
+  <h2 class="">Your last two entries</h2>
   <div class="entries-box">
     <% @entries.each do |entry| %>
       <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos, tags: entry.tags } %>
