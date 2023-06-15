@@ -80,9 +80,35 @@ entry = Entry.new(
   content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
   address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
 )
-entry.date = Date.new(2023, 5, 19)
+entry.date = Date.new(2023, 6, 15)
 entry.theme = Theme.first
 entry.photos.attach(io: file, filename: "Seed_25_d0mx2z.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/Seed_13_tdpnzq.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "A long day in class",
+  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
+  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+)
+entry.date = Date.new(2023, 6, 15)
+entry.theme = Theme.first
+entry.photos.attach(io: file, filename: "Seed_13_tdpnzq.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/Seed_14_qeqk4s.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "Learning new things, and making progress",
+  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
+  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+)
+entry.date = Date.new(2023, 6, 15)
+entry.theme = Theme.first
+entry.photos.attach(io: file, filename: "Seed_14_qeqk4s.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
 
