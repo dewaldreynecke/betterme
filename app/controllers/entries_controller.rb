@@ -29,7 +29,10 @@ class EntriesController < ApplicationController
     @previous_entry = Entry.where("date < ?", @date).order(date: :desc).first
     @markers = @entries_on_same_date.geocoded.map do |entry|
       {
-        lat: entry.latitude, lng: entry.longitude
+        lat: entry.latitude,
+        lng: entry.longitude,
+        # info_window_html: render_to_string(partial: "info_window", locals: { entry: entry }),
+        marker_html: render_to_string(partial: "marker", locals: { entry: entry })
       }
 
     end
