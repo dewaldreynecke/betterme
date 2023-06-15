@@ -1,7 +1,9 @@
-<div id="mood" class="card p-4" style="background-color: #FFF;">
-  <div class="d-flex justify-content-between align-items-center">
-    <h3><strong>Today's mood: Happy!</strong></h3>
-    <%= image_tag "selected_happy.png", alt: "Happy", height: 150 %>
-    <h2 style="padding-right: 35px;"><strong>You're doing great!</strong></h2>
+<div class="mood-selected">
+  <div class="mood-arrange">
+    <h3 class="mood-left-text">Today's mood: Happy!</h3>
+    <div class="mood-face-wrapper">
+      <%= image_tag "selected_happy.png", alt: "Awesome", class: "mood-face" %>
+    </div>
+    <h2 class="mood-right-text">You're doing great!</h2>
   </div>
 </div>
