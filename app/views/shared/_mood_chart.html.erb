@@ -1,5 +1,5 @@
 <div class="chart-box">
-  <h4>Mood history - last 14 days</h4>
+  <h4 class="chart-title">Mood history - last 14 days</h4>
   <%= line_chart chart_data,
       discrete: true,
       label: "Mood",
@@ -8,5 +8,7 @@
       empty: "No mood history",
       download: true,
       colors: ["#33372F", "#666"],
-      legend: false %>
+      legend: false,
+      width: "1180px",
+      height: "262px" %>
 </div>
