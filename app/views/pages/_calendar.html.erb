@@ -1,6 +1,6 @@
 <div id="calendar-dashboard">
   <div class="calendar card">
-    <h1>June 2023</h1>
+    <h2 class="text-center">June 2023</h2>
     <hr>
     <div class="days">
       <div class="day">S</div>
@@ -12,44 +12,40 @@
       <div class="day">S</div>
     </div>
     <div class="dates">
-      <div class="date" id="cal-none"></div>
-      <div class="date" id="cal-none"></div>
-      <div class="date" id="cal-none"></div>
-      <div class="date" id="cal-none"></div>
-      <div class="date" id="cal-awesome">1</div>
-      <div class="date" id="cal-terrible">2</div>
-      <div class="date" id="cal-happy">3</div>
-      <div class="date" id="cal-terrible">4</div>
-      <div class="date" id="cal-okay">5</div>
-      <div class="date" id="cal-awesome">6</div>
-      <div class="date" id="cal-terrible">7</div>
-      <div class="date" id="cal-bad">8</div>
-      <div class="date" id="cal-happy">9</div>
-      <div class="date" id="cal-bad">10</div>
-      <div class="date" id="cal-awesome">11</div>
-      <div class="date" id="cal-terrible">12</div>
-      <div class="date" id="cal-okay">13</div>
-      <div class="date" id="cal-bad">14</div>
-      <div class="date" id="cal-awesome">15</div>
-      <div class="date" id="cal-bad">16</div>
-      <div class="date" id="cal-happy">17</div>
-      <div class="date" id="cal-bad">18</div>
-      <div class="date" id="cal-okay">19</div>
-      <div class="date" id="cal-terrible">20</div>
-      <div class="date" id="cal-awesome">21</div>
-      <div class="date" id="cal-bad">22</div>
-      <div class="date" id="cal-happy">23</div>
-      <div class="date" id="cal-okay">24</div>
-      <div class="date" id="cal-awesome">25</div>
-      <div class="date" id="cal-happy">26</div>
-      <div class="date" id="cal-happy">27</div>
-      <div class="date" id="cal-okay">28</div>
-      <div class="date" id="cal-awesome">29</div>
-      <div class="date" id="cal-bad">30</div>
+      <div class="date"></div>
+      <div class="date"></div>
+      <div class="date"></div>
+      <div class="date"></div>
+      <div class="date <%= @cal_moods[:"1-mood"] %>" id="1"><%= link_to "1", entries_by_date_path(@cal_moods[:"1-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"2-mood"] %>" id="2"><%= link_to "2", entries_by_date_path(@cal_moods[:"2-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"3-mood"] %>" id="3"><%= link_to "3", entries_by_date_path(@cal_moods[:"3-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"4-mood"] %>" id="4"><%= link_to "4", entries_by_date_path(@cal_moods[:"4-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"5-mood"] %>" id="5"><%= link_to "5", entries_by_date_path(@cal_moods[:"5-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"6-mood"] %>" id="6"><%= link_to "6", entries_by_date_path(@cal_moods[:"6-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"7-mood"] %>" id="7"><%= link_to "7", entries_by_date_path(@cal_moods[:"7-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"8-mood"] %>" id="8"><%= link_to "8", entries_by_date_path(@cal_moods[:"8-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"9-mood"] %>" id="9"><%= link_to "9", entries_by_date_path(@cal_moods[:"9-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"10-mood"] %>" id="10"><%= link_to "10", entries_by_date_path(@cal_moods[:"10-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"11-mood"] %>" id="11"><%= link_to "11", entries_by_date_path(@cal_moods[:"11-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"12-mood"] %>" id="12"><%= link_to "12", entries_by_date_path(@cal_moods[:"12-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"13-mood"] %>" id="13"><%= link_to "13", entries_by_date_path(@cal_moods[:"13-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"14-mood"] %>" id="14"><%= link_to "14", entries_by_date_path(@cal_moods[:"14-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"15-mood"] %>" id="15"><%= link_to "15", entries_by_date_path(@cal_moods[:"15-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"16-mood"] %>" id="16"><%= link_to "16", entries_by_date_path(@cal_moods[:"16-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"17-mood"] %>" id="17"><%= link_to "17", entries_by_date_path(@cal_moods[:"17-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"18-mood"] %>" id="18"><%= link_to "18", entries_by_date_path(@cal_moods[:"18-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"19-mood"] %>" id="19"><%= link_to "19", entries_by_date_path(@cal_moods[:"19-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"20-mood"] %>" id="20"><%= link_to "20", entries_by_date_path(@cal_moods[:"20-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"21-mood"] %>" id="21"><%= link_to "21", entries_by_date_path(@cal_moods[:"21-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"22-mood"] %>" id="22"><%= link_to "22", entries_by_date_path(@cal_moods[:"22-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"23-mood"] %>" id="23"><%= link_to "23", entries_by_date_path(@cal_moods[:"23-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"24-mood"] %>" id="24"><%= link_to "24", entries_by_date_path(@cal_moods[:"24-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"25-mood"] %>" id="25"><%= link_to "25", entries_by_date_path(@cal_moods[:"25-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"26-mood"] %>" id="26"><%= link_to "26", entries_by_date_path(@cal_moods[:"26-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"27-mood"] %>" id="27"><%= link_to "27", entries_by_date_path(@cal_moods[:"27-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"28-mood"] %>" id="28"><%= link_to "28", entries_by_date_path(@cal_moods[:"28-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"29-mood"] %>" id="29"><%= link_to "29", entries_by_date_path(@cal_moods[:"29-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"30-mood"] %>" id="30"><%= link_to "30", entries_by_date_path(@cal_moods[:"30-date"]), class: "day-link" %></div>
     </div>
   </div>
 </div>
-
-  <%# <%= week_calendar(number_of_weeks: 1) do |date| %>
-  <%# <%= date.day %>
-  <%# end %>
