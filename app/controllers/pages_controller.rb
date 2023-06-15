@@ -67,7 +67,8 @@ class PagesController < ApplicationController
     (1..30).to_a.each do |day|
       date = Date.new(2023, 6, day)
       mood = Mood.where(date:)
-      return_hash[:"#{day}"] = mood.empty? ? "" : "cal-m-#{mood.first.mood}"
+      return_hash[:"#{day}-mood"] = mood.empty? ? "" : "cal-m-#{mood.first.mood}"
+      return_hash[:"#{day}-date"] = "2023-06-#{day}"
     end
     return return_hash
   end
