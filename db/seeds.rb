@@ -73,19 +73,6 @@ puts ''
 
 puts 'Creating entries...(this will take about a minute)'
 
-file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832728/Seed_25_d0mx2z.jpg")
-entry = Entry.new(
-  user_id: User.last.id,
-  title: "Creating Memories with Loved Ones",
-  content: "Today was a special day as I took a break from my web development studies to create beautiful memories with my loved ones. We embarked on an adventure together, exploring new places and experiencing joyous moments. Being surrounded by the warmth and laughter of family and friends reminded me of the importance of balance in life. While my web development journey is a significant part of my growth, it's equally vital to nourish the relationships that bring meaning and happiness. Today's memories will serve as a reminder of the love and support that fuels my pursuit of knowledge and success in web development.",
-  address: "9 Park Rd, Gardens, Cape Town, 8001"
-)
-entry.date = Date.new(2023, 6, 16)
-entry.theme = Theme.first
-entry.photos.attach(io: file, filename: "Seed_25_d0mx2z.jpg", content_type: "image/jpg")
-entry.save
-sleep(1)
-
 file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/Seed_13_tdpnzq.jpg")
 entry = Entry.new(
   user_id: User.last.id,
@@ -125,16 +112,55 @@ entry.photos.attach(io: file, filename: "Seed_12_cvc7hl.jpg", content_type: "ima
 entry.save
 sleep(1)
 
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/Seed_15_t2q0x0.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "Excited, but nervous about tomorrow's demo",
+  content: "As tomorrow's demo approaches, I find myself caught in a whirlwind of emotions. Excitement and nervousness mingle within me, creating a unique blend of anticipation. I've been working tirelessly, pouring my heart and soul into the web development project that will be showcased. The opportunity to present my hard work and demonstrate the skills I've acquired is both thrilling and anxiety-inducing. Will everything go smoothly? Will I be able to articulate my ideas effectively? These questions dance in my mind, but deep down, I know that this nervousness is a sign of my investment and passion for web development. I take a deep breath, reminding myself to embrace the challenge, and channel my energy into delivering a compelling and successful demo.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
+)
+entry.date = Date.new(2023, 6, 15)
+entry.theme = Theme.first
+entry.photos.attach(io: file, filename: "Seed_15_t2q0x0.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832728/Seed_25_d0mx2z.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "Cherishing Memories with Loved Ones",
+  content: "Today was a special day as I took a break from my web development studies to remember beautiful memories with my loved ones. We embarked on an adventure together, exploring new places and experiencing joyous moments. Being surrounded by the warmth and laughter of family and friends reminded me of the importance of balance in life. While my web development journey is a significant part of my growth, it's equally vital to nourish the relationships that bring meaning and happiness. Today's memories will serve as a reminder of the love and support that fuels my pursuit of knowledge and success in web development.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
+)
+entry.date = Date.new(2023, 6, 15)
+entry.theme = Theme.first
+entry.photos.attach(io: file, filename: "Seed_25_d0mx2z.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
 file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/Seed_10_jnoapi.jpg")
 entry = Entry.new(
   user_id: User.last.id,
   title: "Running towards my goal",
   content: "Like a runner in a race, I am sprinting towards my web development goals. Each day brings new challenges and opportunities, and I embrace them with determination and focus. Sometimes the path feels arduous, but I remind myself of the bigger picture – the satisfaction of achieving what I set out to do. It's the drive to master new technologies, build innovative websites, and contribute to the digital landscape that propels me forward. With each step I take, I'm closer to crossing the finish line, armed with a wealth of skills and knowledge, ready to make a meaningful impact in the world of web development.",
-  address: "9 Park Rd, Gardens, Cape Town, 8001"
+  address: "6 Bergsicht, Bergsig, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 6, 14)
 entry.theme = Theme.first
 entry.photos.attach(io: file, filename: "Seed_10_jnoapi.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832734/Seed_51_mabhmy.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "The end is nigh",
+  content: "As I approach the final stages of my web development journey, a mix of emotions swirls within me. The end is nigh, and with it comes a sense of accomplishment and relief, mingled with a touch of bittersweet sentiment. The countless hours spent coding, troubleshooting, and learning are culminating in this defining moment. While I'm excited to see the fruits of my labor, there's also a tinge of nostalgia for the journey itself. The challenges, the breakthroughs, and the camaraderie with fellow learners have shaped me in ways beyond technical expertise. As the end draws near, I reflect on the growth, the transformation, and the new possibilities that lie ahead. The end may be nigh, but the beginning of a new chapter awaits.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
+)
+entry.date = Date.new(2023, 6, 14)
+entry.theme = Theme.first
+entry.photos.attach(io: file, filename: "Seed_51_mabhmy.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
 
@@ -182,7 +208,7 @@ entry = Entry.new(
   user_id: User.last.id,
   title: "Beautiful day spent with family",
   content: "Today, I took a break from my web development endeavors to cherish a beautiful day spent with my family. We enjoyed quality time together, exploring nature, sharing laughter, and creating cherished memories. It's crucial to remember that our journey in web development is not just about achieving professional goals but also about maintaining a balanced and fulfilling life. The support and love of family provide the foundation upon which we build our dreams. Today's beautiful day reminded me of the importance of taking breaks, nurturing relationships, and finding inspiration outside the realm of coding.",
-  address: "9 Park Rd, Gardens, Cape Town, 8001"
+  address: "6 Bergsicht, Bergsig, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 6, 11)
 entry.theme = Theme.first
@@ -381,7 +407,7 @@ puts "#{Zenquote.all.count} Zenquotes added to database."
 puts ''
 
 puts 'Creating Moods'
-mood = Mood.new(mood: :awesome)
+mood = Mood.new(mood: :okay)
 mood.date = Date.new(2023, 6, 1)
 mood.user = User.last
 mood.save
@@ -389,11 +415,11 @@ mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 2)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :happy)
+mood = Mood.new(mood: :awesome)
 mood.date = Date.new(2023, 6, 3)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :okay)
+mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 4)
 mood.user = User.last
 mood.save
@@ -405,11 +431,11 @@ mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 6)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :okay)
+mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 7)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :awesome)
+mood = Mood.new(mood: :bad)
 mood.date = Date.new(2023, 6, 8)
 mood.user = User.last
 mood.save
@@ -417,7 +443,7 @@ mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 9)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :bad)
+mood = Mood.new(mood: :awesome)
 mood.date = Date.new(2023, 6, 10)
 mood.user = User.last
 mood.save
@@ -429,15 +455,15 @@ mood = Mood.new(mood: :awesome)
 mood.date = Date.new(2023, 6, 12)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :bad)
+mood = Mood.new(mood: :okay)
 mood.date = Date.new(2023, 6, 13)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :happy)
+mood = Mood.new(mood: :bad)
 mood.date = Date.new(2023, 6, 14)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :awesome)
+mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 15)
 mood.user = User.last
 mood.save
