@@ -1,18 +1,21 @@
 #search-results {
-  // display: grid;
+  display: grid;
   justify-content: center;
-  // grid-template: repeat(3, 3fr) / repeat(2, 3fr);
-  // grid-auto-flow: row dense;
-  // justify-content: space-between;
-  // gap: 20px;
-  // width: calc(100% - 10px);
-  // margin-top: -25px;
+  grid-template: repeat(3, 3fr) / repeat(2, 3fr);
+  grid-auto-flow: row dense;
+  justify-content: space-between;
+  gap: 20px;
+  width: calc(100% - 10px);
+  margin-top: -25px;
 }
 
 .search-box-container {
   display: inline-block;
   overflow: hidden;
   margin-right: 25px;
+  input:focus{
+    outline: none;
+  }
 }
 
 .searchbox {
