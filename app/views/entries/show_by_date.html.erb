@@ -34,12 +34,13 @@
 
 
   <% if @entries_on_same_date.any? { |entry| entry.photos.present? } %>
+    <h2 class="mt-4 mb-4">All your images:</h2>
     <div class="scroll-container d-flex justify-content-between mb-4">
       <% @entries_on_same_date.each do |entry| %>
         <% if entry.photos.any? %>
           <div class="photo-container">
             <% entry.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill %>
+              <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill, id: "show-photos" %>
             <% end %>
           </div>
         <% end %>
