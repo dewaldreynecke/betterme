@@ -16,11 +16,12 @@ export default class extends Controller {
     // and deactivate the others
     this.btnTargets.forEach(function (element) {
       if (element.dataset.name === event.target.dataset.name) {
-        element.classList.remove("button-17")
-        element.classList.add("button-74")
+        // element.classList.remove("button-17")
+        // element.classList.add("button-74")
+        element.classList.add("tag-selected")
       } else {
-        element.classList.remove("button-74")
-        element.classList.add("button-17")
+        element.classList.remove("tag-selected")
+        // element.classList.add("button-17")
       }
     })
   }

@@ -26,7 +26,7 @@
                   label: false,
                   input_html: { rows: "14", class: "content-box" },
                   wrapper_html: { class: "me-4 flex-grow-1" } %>
-      <div class="sidebar">
+      <div class="sidebar ms-4">
         <div class="d-flex">
           <%= f.input :photos, as: :file,
                        input_html: { multiple: true },
@@ -43,7 +43,7 @@
           <% unless @addresses.nil? %>
             <% @addresses.each do |address| %>
               <a href=""
-                class="button-17"
+                class="tag-base"
                 data-favourite-address-target="btn"
                 data-action="click->favourite-address#clickHandler"
                 data-address="<%= address.address %>"
@@ -53,15 +53,19 @@
             <% end %>
           <% end %>
         </div>
+        <p class="mt-4">Tags</p>
         <div class="tags" data-controller="tagtoggle">
           <%= f.association :tags,
-                             as: :check_boxes %>
+                             label: false,
+                             as: :check_boxes,
+                             input_html: { class: "d-none" },
+                             wrapper_html: { class: "tag-container" } %>
+        </div>
+        <div class="button-box">
+          <%= f.submit class: "button-74 submit-button"%>
+          <p class="w-100 text-center mt-3"><%= link_to "Cancel", dashboard_path, class: "cancel-button" %></p>
         </div>
       </div>
-    </div>
-    <div class="d-flex justify-content-center mt-4">
-      <%= f.submit class: "button-74 me-4"%>
-      <%= link_to "Cancel", dashboard_path, class: "button-17" %>
     </div>
   <% end %>
 </div>

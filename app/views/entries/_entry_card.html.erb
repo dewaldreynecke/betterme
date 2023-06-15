@@ -23,6 +23,13 @@
       <% unless address.empty? %>
         <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= address %></p>
       <% end %>
+      <% unless tags.empty? %>
+        <div class="show-tag-box">
+          <% tags.each do |tag| %>
+            <span class="tag-small"><%= tag.name %></span>
+          <% end %>
+        </div>
+      <% end %>
       <hr class="ec-hr">
       <p><%= content %></p>
     </div>
