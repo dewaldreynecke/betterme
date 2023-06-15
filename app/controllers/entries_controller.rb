@@ -31,7 +31,12 @@ class EntriesController < ApplicationController
       {
         lat: entry.latitude, lng: entry.longitude
       }
+
     end
+  end
+
+  def show_by_location
+    @entries = Entry.where(latitude: params[:lat], longitude: params[:lng])
   end
 
   private

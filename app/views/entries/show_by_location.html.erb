@@ -1,0 +1,33 @@
+<div class="banner-show d-flex align-items-center justify-content-center">
+  <div class="container m-5">
+    <div class="text-center">
+      <% if @entries.any? %>
+          <h3> <i class="fa-solid fa-location-dot fa-beat"></i> <%= @entries.first.address %></h3>
+      <% end %>
+      <h1 class="pb-2 mt-5">My Journal Entries</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" id="entries">
+    <% @entries.each do |entry| %>
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos, tags: entry.tags  } %>
+    <% end %>
+  </div>
+
+
+  <% if @entries.any? { |entry| entry.photos.present? } %>
+    <div class="scroll-container d-flex justify-content-between mb-4">
+      <% @entries.each do |entry| %>
+        <% if entry.photos.any? %>
+          <div class="photo-container">
+            <% entry.photos.each do |photo| %>
+              <%= cl_image_tag photo.key, height: "300", width: "400", crop: :fill %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

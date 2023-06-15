@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   resources :addresses, only: %i[create destroy]
   resources :tags, only: %i[create destroy show]
 
+  get '/location/', to: 'entries#show_by_location', as: 'entries_by_location'
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
 end
