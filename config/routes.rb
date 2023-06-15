@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   resources :themes, only: %i[create index show]
   resources :addresses, only: %i[create destroy]
 
+  get '/location/', to: 'entries#show_by_location', as: 'entries_by_location'
   get '/entries/:date', to: 'entries#show_by_date', as: 'entries_by_date'
-  get 'entries/:latitude/:longitude', to: 'entries#show_by_location', as: 'entries_by_location'
 end

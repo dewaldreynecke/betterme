@@ -10,8 +10,8 @@ class PagesController < ApplicationController
       {
         lat: entry.latitude,
         lng: entry.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { entry: entry }),
-        marker_html: render_to_string(partial: "marker", locals: { entry: entry }),
+        # info_window_html: render_to_string(partial: "info_window", locals: { entry: entry }),
+        marker_html: render_to_string(partial: "marker", locals: { entry: entry })
       }
     end
     @mood = Mood.where(date: Date.today)
