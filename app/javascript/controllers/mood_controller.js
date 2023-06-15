@@ -9,6 +9,7 @@ export default class extends Controller {
   }
 
   awesome() {
+    this.#setCalendar("awesome")
     fetch("/moods/new?m=awesome", {
       method: "GET",
       headers: { "Accept": "text/plain" },
@@ -20,6 +21,7 @@ export default class extends Controller {
   }
 
   happy() {
+    this.#setCalendar("happy")
     fetch("/moods/new?m=happy", {
       method: "GET",
       headers: { "Accept": "text/plain" },
@@ -31,6 +33,7 @@ export default class extends Controller {
   }
 
   okay() {
+    this.#setCalendar("okay")
     fetch("/moods/new?m=okay", {
       method: "GET",
       headers: { "Accept": "text/plain" },
@@ -42,6 +45,7 @@ export default class extends Controller {
   }
 
   bad() {
+    this.#setCalendar("bad")
     fetch("/moods/new?m=bad", {
       method: "GET",
       headers: { "Accept": "text/plain" },
@@ -53,6 +57,7 @@ export default class extends Controller {
   }
 
   terrible() {
+    this.#setCalendar("terrible")
     fetch("/moods/new?m=terrible", {
       method: "GET",
       headers: { "Accept": "text/plain" },
@@ -61,5 +66,13 @@ export default class extends Controller {
       .then((data) => {
         this.moodcardTarget.innerHTML = data
       })
+  }
+
+  #setCalendar(mood) {
+    const today = Date.now()
+    const date = new Date(today)
+    const day = date.getDate()
+    const todayCal = document.getElementById(day)
+    todayCal.classList.add(`cal-m-${mood}`)
   }
 }
