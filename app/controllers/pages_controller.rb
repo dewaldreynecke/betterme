@@ -1,3 +1,5 @@
+require 'date'
+
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
@@ -21,6 +23,7 @@ class PagesController < ApplicationController
     @moods = @user.moods
     @chart_data = chart_builder
     @entries = current_user.entries.max(2)
+    @cal_moods = cal_month_moods
   end
 
   def confirmation
@@ -53,5 +56,19 @@ class PagesController < ApplicationController
       return_array.push([mood.date.strftime("%e %b"), mood_map[mood.mood]])
     end
     return return_array
+  end
+
+  def cal_month_moods
+    # get the moods for a month and populate & return a hash for the calendar
+    # hash should have an entry for every day of the month
+    # mood should be class name
+    # example output {1: "cal-m-okay",2: "",3: "cal-m-awesome"}
+    return_hash = {}
+    (1..30).to_a.each do |day|
+      date = Date.new(2023, 6, day)
+      mood = Mood.where(date:)
+      return_hash[:"#{day}"] = mood.empty? ? "" : "cal-m-#{mood.first.mood}"
+    end
+    return return_hash
   end
 end
