@@ -11,6 +11,7 @@
 
 .content-box {
   border-radius: 20px !important;
+  height: 100%;
 }
 
 .tag-base {
@@ -20,15 +21,11 @@
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
   color: #888888;
   cursor: pointer;
-  // display: inline-block;
   font-weight: 400;
   font-size: 14px;
   padding: 6px 12px;
-  // line-height: 40px;
   text-align: center;
   text-decoration: none;
-  // user-select: none;
-  // -webkit-user-select: none;
 }
 
 .tag-base:hover {
@@ -50,4 +47,17 @@
   gap: 10px;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   grid-auto-flow: row dense;
+}
+
+.cancel-button {
+  text-decoration: none;
+  color: #4D5348
+}
+
+.submit-button {
+  width: 100%;
+}
+
+.button-box {
+  margin: 75px 0 0 0;
 }
