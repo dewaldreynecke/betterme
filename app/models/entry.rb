@@ -12,7 +12,7 @@ class Entry < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :search_by_entry,
-                  against: [:title, :content, :address],
+                  against: [:date, :title, :content, :address],
                   using: {
                     tsearch: { prefix: true }
                         }
