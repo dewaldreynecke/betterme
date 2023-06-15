@@ -77,8 +77,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832728/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Creating Memories with Loved Ones",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today was a special day as I took a break from my web development studies to create beautiful memories with my loved ones. We embarked on an adventure together, exploring new places and experiencing joyous moments. Being surrounded by the warmth and laughter of family and friends reminded me of the importance of balance in life. While my web development journey is a significant part of my growth, it's equally vital to nourish the relationships that bring meaning and happiness. Today's memories will serve as a reminder of the love and support that fuels my pursuit of knowledge and success in web development.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 16)
 entry.theme = Theme.first
@@ -90,8 +90,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "A long day in class",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today was an intense and challenging day in class. From early morning lectures to late-night coding sessions, it felt like a whirlwind of information and tasks. The complexity of web development can be overwhelming at times, and today was a reminder of the effort required to truly understand and master the concepts. Despite the mental exhaustion, I remained focused and engaged, knowing that every moment of perseverance brings me closer to my goals. As I reflect on this long day, I'm reminded of the resilience and determination it takes to thrive in the ever-evolving world of web development.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
 entry.theme = Theme.first
@@ -103,8 +103,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Learning new things, and making progress",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today has been a day of discovery and growth in my web development journey. I've been diving into new concepts and technologies, expanding my knowledge and skill set. Each new piece of information learned feels like a small victory, and I can see myself making progress. It's both exciting and humbling to realize how much there is to learn in this field. Despite the challenges and occasional frustrations, I'm motivated by the satisfaction that comes with understanding something new. With every step forward, I become more confident in my ability to navigate the vast world of web development.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
 entry.theme = Theme.first
@@ -116,8 +116,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Working hard or hardly working?",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today, I find myself contemplating the balance between working hard and taking breaks in my web development journey. There are days when I dive headfirst into coding, completely absorbed in the tasks at hand. Other times, I feel overwhelmed and struggle to find the motivation to work. It's important to find a rhythm that allows for both focused productivity and self-care. Recognizing when to take breaks and recharge is just as crucial as putting in the effort. I'm learning to listen to my mind and body, seeking a healthy equilibrium that keeps me engaged, motivated, and progressing towards my goals.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 15)
 entry.theme = Theme.first
@@ -129,8 +129,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Running towards my goal",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Like a runner in a race, I am sprinting towards my web development goals. Each day brings new challenges and opportunities, and I embrace them with determination and focus. Sometimes the path feels arduous, but I remind myself of the bigger picture – the satisfaction of achieving what I set out to do. It's the drive to master new technologies, build innovative websites, and contribute to the digital landscape that propels me forward. With each step I take, I'm closer to crossing the finish line, armed with a wealth of skills and knowledge, ready to make a meaningful impact in the world of web development.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 14)
 entry.theme = Theme.first
@@ -142,8 +142,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832727/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Finally get to shoot again",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today, I had the chance to revisit a project that I had set aside for a while due to other commitments. It felt like getting back to an old hobby, picking up where I left off. The joy and excitement of coding and building a website rushed back to me, and I was reminded of why I fell in love with web development in the first place. It's exhilarating to see my project come to life, and I appreciate the opportunity to engage with my creative side. Today's experience reaffirmed my passion for web development and fueled my enthusiasm to continue creating and exploring.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 13)
 entry.theme = Theme.first
@@ -154,9 +154,9 @@ sleep(1)
 file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832727/Seed_21_sk2qsj.jpg")
 entry = Entry.new(
   user_id: User.last.id,
-  title: "Finally get to shoot again",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  title: "Big leaps today",
+  content: "Today was a day of significant progress in my web development journey. I tackled complex coding challenges, implemented new features, and pushed myself outside of my comfort zone. It's incredible to witness the leaps I've made in my skills and confidence. Each breakthrough feels like a milestone, reminding me of the power of persistence and hard work. These big leaps propel me forward, encouraging me to continue embracing challenges and embracing continuous learning. I'm grateful for the opportunities that push me to grow, reminding me that the possibilities in web development are vast and rewarding.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 13)
 entry.theme = Theme.first
@@ -168,8 +168,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Will I ever understand this?",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today was a day of significant progress in my web development journey. I tackled complex coding challenges, implemented new features, and pushed myself outside of my comfort zone. It's incredible to witness the leaps I've made in my skills and confidence. Each breakthrough feels like a milestone, reminding me of the power of persistence and hard work. These big leaps propel me forward, encouraging me to continue embracing challenges and embracing continuous learning. I'm grateful for the opportunities that push me to grow, reminding me that the possibilities in web development are vast and rewarding.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 12)
 entry.theme = Theme.first
@@ -181,8 +181,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832730/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Beautiful day spent with family",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today, I took a break from my web development endeavors to cherish a beautiful day spent with my family. We enjoyed quality time together, exploring nature, sharing laughter, and creating cherished memories. It's crucial to remember that our journey in web development is not just about achieving professional goals but also about maintaining a balanced and fulfilling life. The support and love of family provide the foundation upon which we build our dreams. Today's beautiful day reminded me of the importance of taking breaks, nurturing relationships, and finding inspiration outside the realm of coding.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 11)
 entry.theme = Theme.first
@@ -193,9 +193,9 @@ sleep(1)
 file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832728/Seed_22_udm8pa.jpg")
 entry = Entry.new(
   user_id: User.last.id,
-  title: "Beautiful day spent with family",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  title: "Happy about my progress so far",
+  content: "Today was a beautiful day, and I decided to take a break from my web development studies to spend quality time with my family. We went for a picnic in the park, enjoying the warm sunshine and the laughter that filled the air. It was refreshing to step away from the screen and immerse myself in the joy of the present moment. Being surrounded by loved ones reminded me of the importance of balance in life. These moments of connection and rejuvenation fuel my motivation to continue learning web development and create a future where I can balance work and cherished family moments.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 11)
 entry.theme = Theme.first
@@ -207,8 +207,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832729/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Beautiful day spent with family",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "I'm feeling a deep sense of satisfaction and pride when I reflect on my progress in learning web development. From grasping the fundamentals of HTML and CSS to experimenting with JavaScript, I can see how far I've come. The hours spent coding and problem-solving have paid off, and it's rewarding to witness my skills grow. Every step forward boosts my confidence and motivates me to keep pushing myself further. While there's still much to learn, I'm embracing this moment of celebration and using it as fuel to continue my journey with even more determination and enthusiasm.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 11)
 entry.theme = Theme.first
@@ -220,8 +220,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832730/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Relaxed day at home",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today was a much-needed break from the intensity of learning web development. I decided to have a relaxed day at home, indulging in some self-care activities. I curled up with a good book, enjoyed a cup of tea, and simply allowed myself to unwind. Giving myself permission to recharge and rejuvenate is crucial on this learning journey. It's easy to get caught up in the demands of acquiring new skills, but it's equally important to find balance and take care of my well-being. Today's quiet and peaceful day reminded me of the value of rest and allowed me to return to my studies with a refreshed perspective.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 11)
 entry.theme = Theme.first
@@ -233,8 +233,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832728/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Going on adventures!",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Web development has opened up a world of possibilities and adventures for me. With every new concept I learn, I feel a surge of excitement to explore and apply it in creative ways. I find myself constantly seeking new challenges and projects that push the boundaries of my skills. From building responsive websites to diving into backend development, every adventure fuels my passion and curiosity. It's invigorating to embark on this journey of continuous learning and discovery. The thrill of creating something meaningful and impactful keeps me motivated and reminds me why I chose web development as my path.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 10)
 entry.theme = Theme.first
@@ -246,8 +246,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Javascript will be the end of me",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "JavaScript, oh JavaScript! The road to mastering this powerful language is filled with twists, turns, and moments of frustration. As I dive deeper into JavaScript, I encounter complex concepts and face the challenges of debugging and troubleshooting. It's a language that demands attention to detail and a strong problem-solving mindset. There are times when I feel like throwing my hands up in the air, questioning my abilities. But deep down, I know that overcoming these obstacles will lead to immense growth. JavaScript may be tough, but I'm determined to conquer it and emerge stronger on the other side.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 7)
 entry.theme = Theme.first
@@ -259,8 +259,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832723/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Making my way through front end",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "As I delve deeper into the world of web development, I find myself navigating through the realm of front-end development. It's an exciting and dynamic space that combines design and coding, and I'm intrigued by the possibilities it offers. Learning HTML, CSS, and JavaScript has been both challenging and rewarding. I'm slowly gaining a better understanding of how to structure web pages, style them, and add interactivity. The journey is just beginning, but I'm determined to keep pushing forward, building my skills, and embracing the opportunities that front-end development has to offer.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 6)
 entry.theme = Theme.first
@@ -272,8 +272,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Front-end is an interesting beast",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Front-end development has proven to be quite the interesting beast. It's a constantly evolving field with new frameworks, libraries, and techniques emerging all the time. There's always something new to learn, which keeps me on my toes. The blend of creativity and logic required in front-end development is fascinating. It's not just about writing code; it's about crafting user experiences and making websites visually appealing. It can be overwhelming at times, but I'm up for the challenge. Embracing the ever-changing nature of front-end development excites me and keeps me motivated to keep pushing forward.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 5)
 entry.theme = Theme.first
@@ -285,8 +285,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832723/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "I think I'm getting the hang of this!",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "After weeks of practice and learning, I can confidently say that I'm getting the hang of web development. The concepts that seemed daunting at first are starting to make sense, and I'm able to apply my knowledge to solve problems and build functional websites. It's incredibly satisfying to see my code come to life and witness the impact it can have on user experiences. While there's still much to learn and improve upon, this sense of progress is invigorating and encourages me to keep honing my skills and exploring new possibilities in the realm of web development.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 4)
 entry.theme = Theme.first
@@ -297,9 +297,9 @@ sleep(1)
 file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832734/Seed_49_gwgxvf.jpg")
 entry = Entry.new(
   user_id: User.last.id,
-  title: "Can't believe we're half way already",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  title: "Good times are coming",
+  content: "As I continue my web development journey, I can't help but feel a sense of optimism and excitement for what lies ahead. The more I learn and practice, the more confident I become in my abilities. I can envision a future where I create innovative web solutions, collaborate with like-minded individuals, and contribute to meaningful projects. The world of web development is vast, and it offers endless opportunities for growth and creativity. I look forward to the challenges, the successes, and the continuous learning that awaits me on this exciting path.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 3)
 entry.theme = Theme.first
@@ -311,8 +311,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832736/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Can't believe we're half way already",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Time flies when you're immersed in learning web development! It's hard to believe that I'm already halfway through my journey. Looking back at where I started, I'm amazed at how much progress I've made. From understanding the basics to building complex web applications, it's been a rollercoaster of knowledge and experiences. There were moments of frustration, but they were overshadowed by the satisfaction of overcoming obstacles and witnessing my growth. I'm proud of how far I've come, and it motivates me to continue pushing myself in the second half of this adventure. The best is yet to come!",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 3)
 entry.theme = Theme.first
@@ -324,8 +324,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832723/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "The hustle is becoming real",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "The past few weeks have been a whirlwind of activity, and I can't help but feel that the hustle is becoming real. Every day is packed with endless to-do lists, deadlines, and constant juggling of multiple projects. It's both exhilarating and exhausting at the same time. The more I dive into my work, the more I realize how much effort and dedication it takes to achieve my goals. It's a constant push to stay motivated and focused, but deep down, I know it's all worth it. The hustle is real, and I'm ready to embrace it with open arms.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 2)
 entry.theme = Theme.first
@@ -337,8 +337,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832735/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "tired.",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "Today, I woke up feeling utterly exhausted. The fatigue has settled into my bones, and even the simplest tasks feel like a Herculean effort. The hustle and bustle of life have taken their toll on me, and I can't help but yearn for a moment of respite. Burnout is a real threat, and I need to remind myself to take breaks, prioritize self-care, and recharge. It's okay to feel tired; it's a sign that I've been putting in the effort. But I must remember that pushing myself to the limit without taking care of my well-being will only lead to diminishing returns. Today, I choose to rest and rejuvenate.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 1)
 entry.theme = Theme.first
@@ -350,8 +350,8 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "I think web-dev is my next path",
-  content: "Today, on June 19th, was a day filled with laughter, love, and cherished moments with my loved ones. We shared stories, created memories, and strengthened our bonds. The happiness that comes from being surrounded by the people I care about is unmatched.",
-  address: "19 Dock Road, Victoria & Alfred Waterfront, Cape Town, 8001",
+  content: "I've come to the realization that web development might just be the path I want to pursue. The endless possibilities of creating interactive and engaging websites, the opportunity to solve problems through coding, and the chance to continuously learn and grow in a rapidly evolving field all appeal to me. It's an exciting journey to embark upon, and while I know there will be challenges along the way, I'm eager to dive into the world of web development and see where it takes me.",
+  address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 1)
 entry.theme = Theme.first
@@ -413,7 +413,7 @@ mood = Mood.new(mood: :awesome)
 mood.date = Date.new(2023, 6, 8)
 mood.user = User.last
 mood.save
-mood = Mood.new(mood: :awesome)
+mood = Mood.new(mood: :happy)
 mood.date = Date.new(2023, 6, 9)
 mood.user = User.last
 mood.save
