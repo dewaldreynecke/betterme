@@ -4,7 +4,7 @@
     <h1 class="pb-2" data-theme-target="themeheader"><%= @current_theme.text %></h1>
     <%= simple_form_for(@theme, html: { class: "d-none", data: {theme_target: "themeform", novalidate: true} }) do |f| %>
       <%= f.input :text, input_html: { data: {theme_target: "themeinput"}}, label: "Change your theme to something new" %>
-      <%= f.submit %>
+      <%= f.submit class: "button-17-theme-change me-4"%>
     <% end %>
     <p data-theme-target="editbutton" data-action="click->theme#displayForm"><i class="fa-solid fa-pen"></i></p>
   </div>
@@ -42,7 +42,7 @@
   </div>
 
   <%# LAST FEW ENTRIES %>
-  <h2>Your last two entries</h2>
+  <h2 class="mb-5">Your last two entries</h2>
   <div class="entries-box">
     <% @entries.each do |entry| %>
       <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos } %>
