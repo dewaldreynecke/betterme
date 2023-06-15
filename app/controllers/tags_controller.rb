@@ -14,7 +14,7 @@ class TagsController < ApplicationController
 
   def destroy
     @tag = Tag.find(params[:id])
-    @tag.destroy
+    @tag.deleted = true
     redirect_to profile_path
   end
 
