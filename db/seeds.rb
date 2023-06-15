@@ -41,6 +41,9 @@ puts "...done. #{Address.all.count} addresses created for user #{User.last.fulln
 puts ''
 
 puts 'Creating tags...'
+tag = Tag.new(name: 'Study')
+tag.user = User.last
+tag.save
 tag = Tag.new(name: 'Family')
 tag.user = User.last
 tag.save
@@ -50,22 +53,28 @@ tag.save
 tag = Tag.new(name: 'Exercise')
 tag.user = User.last
 tag.save
+tag = Tag.new(name: 'Holiday')
+tag.user = User.last
+tag.save
+tag = Tag.new(name: 'Rest')
+tag.user = User.last
+tag.save
 puts "...done. #{Tag.all.count} tags created for user #{User.last.fullname}."
 puts ''
 
 puts 'Creating themes...'
 theme1 = Theme.new(text: 'Make time for myself',
-                   start: Time.new(2023, 5, 18, 0, 0, 0, "+0200"),
-                   end: Time.new(2023, 5, 27, 23, 59, 59, "+0200"))
+                   start: Time.new(2023, 6, 1, 0, 0, 0, "+0200"),
+                   end: Time.new(2023, 6, 7, 23, 59, 59, "+0200"))
 theme1.user = User.last
 theme1.save
 theme2 = Theme.new(text: 'Spend more time with family and friends',
-                   start: Time.new(2023, 5, 28, 0, 0, 0, "+0200"),
-                   end: Time.new(2023, 6, 5, 23, 59, 59, "+0200"))
+                   start: Time.new(2023, 6, 7, 0, 0, 0, "+0200"),
+                   end: Time.new(2023, 6, 10, 10, 59, 59, "+0200"))
 theme2.user = User.last
 theme2.save
 theme3 = Theme.new(text: 'Be more present and mindful',
-                   start: Time.new(2023, 6, 7, 0, 0, 0, "+0200"))
+                   start: Time.new(2023, 6, 10, 0, 0, 0, "+0200"))
 theme3.user = User.last
 theme3.save
 puts "#{Theme.all.count} themes created."
@@ -81,7 +90,8 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first]
 entry.photos.attach(io: file, filename: "Seed_13_tdpnzq.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -94,8 +104,27 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first]
 entry.photos.attach(io: file, filename: "Seed_14_qeqk4s.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832735/Seed_54_qb1ppc.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "Big day today",
+  content: "Today is a day filled with anticipation and nervous energy. It's a big day in my web development journey, a day that holds significant importance and potential outcomes. The culmination of weeks, if not months, of hard work and dedication has led to this moment.
+
+  As I prepare myself for the challenges that lie ahead, I can't help but feel a mix of excitement and apprehension. This day represents an opportunity to showcase my skills, to present my ideas, and to demonstrate the progress I've made. It's a chance to receive feedback, to learn from the experience, and to grow as a developer.
+
+  The weight of this day is a testament to the passion and commitment I've poured into my web development endeavors. It's a reminder of the immense possibilities that await me and the impact I can make in this field.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
+)
+entry.date = Date.new(2023, 6, 16)
+entry.theme = Theme.last
+entry.tags = [Tag.first]
+entry.photos.attach(io: file, filename: "Seed_54_qb1ppc.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
 
@@ -107,7 +136,8 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 15)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first, Tag.second]
 entry.photos.attach(io: file, filename: "Seed_12_cvc7hl.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -120,8 +150,29 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 15)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first, Tag.second]
 entry.photos.attach(io: file, filename: "Seed_15_t2q0x0.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832724/Seed_8_ae8wy0.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "I've learnt so much",
+  content: "Looking back on my web development journey, I am filled with a profound sense of gratitude and accomplishment. The knowledge and skills I have acquired throughout this experience are invaluable. From the basics of HTML and CSS to more advanced concepts like JavaScript frameworks and backend development, I have expanded my horizons and embraced the ever-evolving landscape of web development.
+
+  Each milestone reached, each challenge overcome, has shaped me into a more resilient and versatile developer. I have discovered the power of problem-solving, the joy of creativity, and the satisfaction of building something meaningful. The learning process has been both exhilarating and humbling, reminding me that growth is a continuous journey.
+
+  As I reflect on how far I've come, I can't help but appreciate the support and guidance I've received from mentors, fellow learners, and the vast online community. Their insights and shared experiences have enriched my learning and inspired me to push beyond my limits.
+
+  Yet, this realization of how much I have learned is not accompanied by a sense of complacency. On the contrary, it ignites a desire to keep expanding my knowledge, staying up-to-date with industry trends, and mastering new technologies. Learning in web development is a lifelong pursuit, and I'm excited to embrace the challenges and opportunities that lie ahead.",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
+)
+entry.date = Date.new(2023, 6, 15)
+entry.theme = Theme.last
+entry.tags = [Tag.first, Tag.second]
+entry.photos.attach(io: file, filename: "Seed_8_ae8wy0.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
 
@@ -133,7 +184,7 @@ entry = Entry.new(
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 15)
-entry.theme = Theme.first
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_25_d0mx2z.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -146,8 +197,23 @@ entry = Entry.new(
   address: "6 Bergsicht, Bergsig, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 6, 14)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first]
 entry.photos.attach(io: file, filename: "Seed_10_jnoapi.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832734/Seed_49_gwgxvf.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "Dealing with my imposter syndrome",
+  content: "Like a runner in a race, I am sprinting towards my web development goals. Each day brings new challenges and opportunities, and I embrace them with determination and focus. Sometimes the path feels arduous, but I remind myself of the bigger picture – the satisfaction of achieving what I set out to do. It's the drive to master new technologies, build innovative websites, and contribute to the digital landscape that propels me forward. With each step I take, I'm closer to crossing the finish line, armed with a wealth of skills and knowledge, ready to make a meaningful impact in the world of web development.",
+  address: "6 Bergsicht, Bergsig, Cape Town, 7550"
+)
+entry.date = Date.new(2023, 6, 14)
+entry.theme = Theme.last
+entry.tags = [Tag.first]
+entry.photos.attach(io: file, filename: "Seed_49_gwgxvf.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
 
@@ -159,7 +225,7 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 14)
-entry.theme = Theme.first
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_51_mabhmy.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -167,12 +233,12 @@ sleep(1)
 file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832727/Seed_19_zj3j3g.jpg")
 entry = Entry.new(
   user_id: User.last.id,
-  title: "Finally get to shoot again",
+  title: "Finally got to shoot again",
   content: "Today, I had the chance to revisit a project that I had set aside for a while due to other commitments. It felt like getting back to an old hobby, picking up where I left off. The joy and excitement of coding and building a website rushed back to me, and I was reminded of why I fell in love with web development in the first place. It's exhilarating to see my project come to life, and I appreciate the opportunity to engage with my creative side. Today's experience reaffirmed my passion for web development and fueled my enthusiasm to continue creating and exploring.",
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
-entry.date = Date.new(2023, 6, 13)
-entry.theme = Theme.first
+entry.date = Date.new(2023, 6, 14)
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_19_zj3j3g.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -185,7 +251,7 @@ entry = Entry.new(
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 13)
-entry.theme = Theme.first
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_21_sk2qsj.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -198,7 +264,7 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 12)
-entry.theme = Theme.first
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_18_tqs1ln.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -211,7 +277,8 @@ entry = Entry.new(
   address: "6 Bergsicht, Bergsig, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 6, 11)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first, Tag.second]
 entry.photos.attach(io: file, filename: "Seed_27_xgatab.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -224,8 +291,28 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 11)
-entry.theme = Theme.first
+entry.theme = Theme.last
+entry.tags = [Tag.first]
 entry.photos.attach(io: file, filename: "Seed_22_udm8pa.jpg", content_type: "image/jpg")
+entry.save
+sleep(1)
+
+file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/Seed_16_orwh0r.jpg")
+entry = Entry.new(
+  user_id: User.last.id,
+  title: "Excited to see where this goes",
+  content: "As I delve deeper into the world of web development, a sense of anticipation and excitement fills my heart. The possibilities and potential that lie ahead are endless, and I can't help but wonder where this journey will take me.
+
+  With each line of code I write and each project I complete, I am honing my skills and expanding my knowledge. I feel a growing confidence in my abilities and a hunger to explore new technologies and frameworks. The fast-paced nature of web development fuels my curiosity and ignites my passion for continuous learning.
+
+  But it's not just the technical aspects that excite me. It's the opportunity to create, to build something meaningful and impactful. The ability to craft visually stunning and user-friendly websites, to solve real-world problems through innovative digital solutions, fills me with a sense of purpose.
+
+  I am excited to see where this goes – to witness how my skills and expertise evolve, to collaborate with like-minded individuals, and to contribute to the ever-changing landscape of the web. The dynamic nature of this field means that there will always be something new to learn, new challenges to overcome, and new ideas to explore",
+  address: "47 Durham Ave, Salt River, Cape Town, 7925"
+)
+entry.date = Date.new(2023, 6, 11)
+entry.theme = Theme.last
+entry.photos.attach(io: file, filename: "Seed_16_orwh0r.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
 
@@ -237,7 +324,7 @@ entry = Entry.new(
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 11)
-entry.theme = Theme.first
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_29_xpb9im.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -250,7 +337,7 @@ entry = Entry.new(
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 11)
-entry.theme = Theme.first
+entry.theme = Theme.last
 entry.photos.attach(io: file, filename: "Seed_33_pikpp2.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -263,7 +350,7 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 10)
-entry.theme = Theme.first
+entry.theme = Theme.second
 entry.photos.attach(io: file, filename: "Seed_24_ilqqjs.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
@@ -276,7 +363,7 @@ entry = Entry.new(
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 7)
-entry.theme = Theme.first
+entry.theme = Theme.second
 entry.photos.attach(io: file, filename: "Seed_16_orwh0r.jpg", content_type: "image/jpg")
 entry.save
 sleep(1)
