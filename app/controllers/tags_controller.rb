@@ -10,11 +10,14 @@ class TagsController < ApplicationController
   end
 
   def show
+    @mood = Mood.where(date: Date.today)
+    @tag = Tag.find(params[:id])
   end
 
   def destroy
     @tag = Tag.find(params[:id])
-    @tag.destroy
+    @tag.deleted = true
+    @tag.save
     redirect_to profile_path
   end
 

@@ -1,0 +1,16 @@
+<div class="banner d-flex align-items-center justify-content-center" style="background-color: #9CA891">
+  <div class="container m-5">
+    <div class="text-center">
+      <h1 class="pb-2"><%= @tag.name.capitalize %></h1>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-5 mt-5">
+  <h2><%= pluralize(@tag.entries.count, 'entry') %> for tag "<%= @tag.name %>"</h2>
+  <div class="row">
+    <% @tag.entries.each do |entry| %>
+      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos, tags: entry.tags } %>
+    <% end %>
+  </div>
+</div>
