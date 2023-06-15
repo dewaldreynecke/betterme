@@ -10,6 +10,8 @@ class TagsController < ApplicationController
   end
 
   def show
+    @mood = Mood.where(date: Date.today)
+    @tag = Tag.find(params[:id])
   end
 
   def destroy
