@@ -25,6 +25,20 @@
           <li class="nav-item">
             <%= link_to "Theme history", themes_path, class: "nav-link", id:"button-74" %>
           </li>
+
+          <div class="search-box-container">
+            <%= form_with url: search_path, method: :get, class: "d-flex" do %>
+              <%= text_field_tag :query,
+                    params[:query],
+                    class:"form-control",
+                    class:"search-bar searchbox",
+                    placeholder: "Find an entry:"
+                %>
+              <%= submit_tag "Search", name: "", class: "button-74-search" %>
+            <% end %>
+          </div>
+
+
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if @mood.empty? %>
