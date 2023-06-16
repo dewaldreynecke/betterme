@@ -6,6 +6,8 @@ puts 'Starting seeding process.'
 puts 'Clearing existing entries from database.'
 Entry.destroy_all
 puts 'Entries removed.'
+Tag.destroy_all
+puts 'Tags removed.'
 Theme.destroy_all
 puts 'Themes removed'
 Inspiration.destroy_all
