@@ -1,7 +1,6 @@
 .confirmbox {
   display: flex;
-  height: calc(100vh - 67.6px);
-  background-color: #fff5bf;
+  height: calc(100vh - 380.4px);
   align-items: center;
 }
 
@@ -11,4 +10,19 @@
   width: 40%;
   margin: 0 auto;
   text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px lightgrey;
+  padding: 25px;
+}
+
+.confirm-heading {
+}
+
+.zenquote {
+  margin: 70px 20px;
+}
+
+.zenquote p {
+  font-size: 20px;;
 }
