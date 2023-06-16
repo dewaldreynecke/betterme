@@ -86,7 +86,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "A long day in class",
-  content: "Today was an intense and challenging day in class. From early morning lectures to late-night coding sessions, it felt like a whirlwind of information and tasks. The complexity of web development can be overwhelming at times, and today was a reminder of the effort required to truly understand and master the concepts. Despite the mental exhaustion, I remained focused and engaged, knowing that every moment of perseverance brings me closer to my goals. As I reflect on this long day, I'm reminded of the resilience and determination it takes to thrive in the ever-evolving world of web development.",
+  content: "Today was an intense and challenging day in class. From early morning lectures to late-night coding sessions, it felt like a whirlwind of information and tasks for the demo. The complexity of web development can be overwhelming at times, and today was a reminder of the effort required to truly understand and master the concepts. Despite the mental exhaustion, I remained focused and engaged, knowing that every moment of perseverance brings me closer to my goals. As I reflect on this long day, I'm reminded of the resilience and determination it takes to thrive in the ever-evolving world of web development.",
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
@@ -100,7 +100,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Learning new things, and making progress",
-  content: "Today has been a day of discovery and growth in my web development journey. I've been diving into new concepts and technologies, expanding my knowledge and skill set. Each new piece of information learned feels like a small victory, and I can see myself making progress. It's both exciting and humbling to realize how much there is to learn in this field. Despite the challenges and occasional frustrations, I'm motivated by the satisfaction that comes with understanding something new. With every step forward, I become more confident in my ability to navigate the vast world of web development.",
+  content: "Today has been a day of discovery and growth in my web development journey. I've been diving into new concepts and technologies, expanding my knowledge and skill set. Each new piece of information for the demo learned feels like a small victory, and I can see myself making progress. It's both exciting and humbling to realize how much there is to learn in this field. Despite the challenges and occasional frustrations, I'm motivated by the satisfaction that comes with understanding something new. With every step forward, I become more confident in my ability to navigate the vast world of web development.",
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
@@ -118,7 +118,7 @@ entry = Entry.new(
 
   As I prepare myself for the challenges that lie ahead, I can't help but feel a mix of excitement and apprehension. This day represents an opportunity to showcase my skills, to present my ideas, and to demonstrate the progress I've made. It's a chance to receive feedback, to learn from the experience, and to grow as a developer.
 
-  The weight of this day is a testament to the passion and commitment I've poured into my web development endeavors. It's a reminder of the immense possibilities that await me and the impact I can make in this field.",
+  The weight of this day is a testament to the passion and commitment I've poured into my web development endeavors. It's a reminder of the immense possibilities that await me after the demo and the impact I can make in this field.",
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 16)
@@ -132,7 +132,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832725/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Working hard or hardly working?",
-  content: "Today, I find myself contemplating the balance between working hard and taking breaks in my web development journey. There are days when I dive headfirst into coding, completely absorbed in the tasks at hand. Other times, I feel overwhelmed and struggle to find the motivation to work. It's important to find a rhythm that allows for both focused productivity and self-care. Recognizing when to take breaks and recharge is just as crucial as putting in the effort. I'm learning to listen to my mind and body, seeking a healthy equilibrium that keeps me engaged, motivated, and progressing towards my goals.",
+  content: "Today, I find myself contemplating the balance between working hard and taking breaks in my web development journey. There are days when I dive headfirst into coding, completely absorbed in the demo at hand. Other times, I feel overwhelmed and struggle to find the motivation to work. It's important to find a rhythm that allows for both focused productivity and self-care. Recognizing when to take breaks and recharge is just as crucial as putting in the effort. I'm learning to listen to my mind and body, seeking a healthy equilibrium that keeps me engaged, motivated, and progressing towards my goals.",
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 15)
@@ -180,7 +180,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832728/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Cherishing Memories with Loved Ones",
-  content: "Today was a special day as I took a break from my web development studies to remember beautiful memories with my loved ones. We embarked on an adventure together, exploring new places and experiencing joyous moments. Being surrounded by the warmth and laughter of family and friends reminded me of the importance of balance in life. While my web development journey is a significant part of my growth, it's equally vital to nourish the relationships that bring meaning and happiness. Today's memories will serve as a reminder of the love and support that fuels my pursuit of knowledge and success in web development.",
+  content: "Today was a special day as I took a break from my web development studies and demo prep to remember beautiful memories with my loved ones. We embarked on an adventure together, exploring new places and experiencing joyous moments. Being surrounded by the warmth and laughter of family and friends reminded me of the importance of balance in life. While my web development journey is a significant part of my growth, it's equally vital to nourish the relationships that bring meaning and happiness. Today's memories will serve as a reminder of the love and support that fuels my pursuit of knowledge and success in web development.",
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 15)
@@ -207,7 +207,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832734/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Dealing with my imposter syndrome",
-  content: "Like a runner in a race, I am sprinting towards my web development goals. Each day brings new challenges and opportunities, and I embrace them with determination and focus. Sometimes the path feels arduous, but I remind myself of the bigger picture – the satisfaction of achieving what I set out to do. It's the drive to master new technologies, build innovative websites, and contribute to the digital landscape that propels me forward. With each step I take, I'm closer to crossing the finish line, armed with a wealth of skills and knowledge, ready to make a meaningful impact in the world of web development.",
+  content: "Like a runner in a race, I am sprinting towards my web development goals. Each day brings new challenges and opportunities, and I embrace them with determination and focus. Sometimes the path feels arduous before the demo, but I remind myself of the bigger picture – the satisfaction of achieving what I set out to do. It's the drive to master new technologies, build innovative websites, and contribute to the digital landscape that propels me forward. With each step I take, I'm closer to crossing the finish line, armed with a wealth of skills and knowledge, ready to make a meaningful impact in the world of web development.",
   address: "6 Bergsicht, Bergsig, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 6, 14)
@@ -234,7 +234,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832727/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Finally got to shoot again",
-  content: "Today, I had the chance to revisit a project that I had set aside for a while due to other commitments. It felt like getting back to an old hobby, picking up where I left off. The joy and excitement of coding and building a website rushed back to me, and I was reminded of why I fell in love with web development in the first place. It's exhilarating to see my project come to life, and I appreciate the opportunity to engage with my creative side. Today's experience reaffirmed my passion for web development and fueled my enthusiasm to continue creating and exploring.",
+  content: "Today, I had the chance to revisit a project that I had set aside for a while due to other commitments. It felt like getting back to an old hobby, picking up where I left off. The joy and excitement of coding and building my app for the demo rushed back to me, and I was reminded of why I fell in love with web development in the first place. It's exhilarating to see my project come to life, and I appreciate the opportunity to engage with my creative side. Today's experience reaffirmed my passion for web development and fueled my enthusiasm to continue creating and exploring.",
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 14)
@@ -273,7 +273,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832730/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Beautiful day spent with family",
-  content: "Today, I took a break from my web development endeavors to cherish a beautiful day spent with my family. We enjoyed quality time together, exploring nature, sharing laughter, and creating cherished memories. It's crucial to remember that our journey in web development is not just about achieving professional goals but also about maintaining a balanced and fulfilling life. The support and love of family provide the foundation upon which we build our dreams. Today's beautiful day reminded me of the importance of taking breaks, nurturing relationships, and finding inspiration outside the realm of coding.",
+  content: "Today, I took a break from my web development endeavors to cherish a beautiful day spent with my family. We enjoyed quality time together, exploring nature, sharing laughter, and creating cherished memories. It's crucial to remember that our journey in web development is not just about achieving professional goals but also about maintaining a balanced and fulfilling life. The support and love of family for the demo provide the foundation upon which we build our dreams. Today's beautiful day reminded me of the importance of taking breaks, nurturing relationships, and finding inspiration outside the realm of coding.",
   address: "6 Bergsicht, Bergsig, Cape Town, 7550"
 )
 entry.date = Date.new(2023, 6, 11)
@@ -333,7 +333,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832730/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Relaxed day at home",
-  content: "Today was a much-needed break from the intensity of learning web development. I decided to have a relaxed day at home, indulging in some self-care activities. I curled up with a good book, enjoyed a cup of tea, and simply allowed myself to unwind. Giving myself permission to recharge and rejuvenate is crucial on this learning journey. It's easy to get caught up in the demands of acquiring new skills, but it's equally important to find balance and take care of my well-being. Today's quiet and peaceful day reminded me of the value of rest and allowed me to return to my studies with a refreshed perspective.",
+  content: "Today was a much-needed break from the intensity of learning web development. I decided to have a relaxed day at home, indulging in some self-care activities. I curled up with a good book, enjoyed a cup of tea, and simply allowed myself to unwind. Giving myself permission to recharge and rejuvenate is crucial on this learning journey. It's easy to get caught up in the demands of acquiring new skills, but it's equally important to find balance and take care of my well-being. Today's quiet and peaceful day reminded me of the value of rest and allowed me to return to my studies and the demo prep with a refreshed perspective.",
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 11)
@@ -411,7 +411,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832734/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "Good times are coming",
-  content: "As I continue my web development journey, I can't help but feel a sense of optimism and excitement for what lies ahead. The more I learn and practice, the more confident I become in my abilities. I can envision a future where I create innovative web solutions, collaborate with like-minded individuals, and contribute to meaningful projects. The world of web development is vast, and it offers endless opportunities for growth and creativity. I look forward to the challenges, the successes, and the continuous learning that awaits me on this exciting path.",
+  content: "As I continue my web development journey, I can't help but feel a sense of optimism and excitement for the demo. The more I learn and practice, the more confident I become in my abilities. I can envision a future where I create innovative web solutions, collaborate with like-minded individuals, and contribute to meaningful projects. The world of web development is vast, and it offers endless opportunities for growth and creativity. I look forward to the challenges, the successes, and the continuous learning that awaits me on this exciting path.",
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 3)
@@ -450,7 +450,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832735/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "tired.",
-  content: "Today, I woke up feeling utterly exhausted. The fatigue has settled into my bones, and even the simplest tasks feel like a Herculean effort. The hustle and bustle of life have taken their toll on me, and I can't help but yearn for a moment of respite. Burnout is a real threat, and I need to remind myself to take breaks, prioritize self-care, and recharge. It's okay to feel tired; it's a sign that I've been putting in the effort. But I must remember that pushing myself to the limit without taking care of my well-being will only lead to diminishing returns. Today, I choose to rest and rejuvenate.",
+  content: "Today, I woke up feeling utterly exhausted. The fatigue has settled into my bones, and even the simplest tasks feel like a demo. The hustle and bustle of life have taken their toll on me, and I can't help but yearn for a moment of respite. Burnout is a real threat, and I need to remind myself to take breaks, prioritize self-care, and recharge. It's okay to feel tired; it's a sign that I've been putting in the effort. But I must remember that pushing myself to the limit without taking care of my well-being will only lead to diminishing returns. Today, I choose to rest and rejuvenate.",
   address: "47 Durham Ave, Salt River, Cape Town, 7925"
 )
 entry.date = Date.new(2023, 6, 1)
@@ -463,7 +463,7 @@ file = URI.open("https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686832726/S
 entry = Entry.new(
   user_id: User.last.id,
   title: "I think web-dev is my next path",
-  content: "I've come to the realization that web development might just be the path I want to pursue. The endless possibilities of creating interactive and engaging websites, the opportunity to solve problems through coding, and the chance to continuously learn and grow in a rapidly evolving field all appeal to me. It's an exciting journey to embark upon, and while I know there will be challenges along the way, I'm eager to dive into the world of web development and see where it takes me.",
+  content: "I've come to the realization that web development might just be the path I want to pursue. The endless possibilities of creating interactive and engaging websites, the opportunity to solve problems through coding, and the chance to continuously learn and grow in a rapidly evolving field all appeal to me. It's an exciting journey to embark upon, and while I know there will be challenges along the way, I'm eager to dive into the world of web development demo and see where it takes me.",
   address: "9 Park Rd, Gardens, Cape Town, 8001"
 )
 entry.date = Date.new(2023, 6, 1)
