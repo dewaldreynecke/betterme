@@ -2,8 +2,8 @@
   <div class="confirmbody">
     <h2 class="confirm-heading">Your journal entry has been saved.</h2>
     <div class="zenquote">
-      <p><%= @zenquote.quote %></p>
-      <p>&mdash;<em><%= @zenquote.author %></em></p>
+      <p class="zenquote-quote"><%= @zenquote.quote %></p>
+      <p class="zenquote-author">&mdash;<em><%= @zenquote.author %></em></p>
     </div>
     <%= link_to "Return to Home page", dashboard_path, class: "button-74" %>
   </div>
