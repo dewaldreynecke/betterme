@@ -73,7 +73,7 @@ theme2 = Theme.new(text: 'Spend more time with family and friends',
                    end: Time.new(2023, 6, 10, 10, 59, 59, "+0200"))
 theme2.user = User.last
 theme2.save
-theme3 = Theme.new(text: 'Be more present and mindful',
+theme3 = Theme.new(text: 'Focus pays off',
                    start: Time.new(2023, 6, 10, 0, 0, 0, "+0200"))
 theme3.user = User.last
 theme3.save
