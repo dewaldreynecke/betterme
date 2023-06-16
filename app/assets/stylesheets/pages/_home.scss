@@ -6,6 +6,7 @@
   color: white;
   text-shadow: 1.5px 1px black;
   object-fit: scale-down;
+  height: 400px;
 }
 
 .home-container {
@@ -67,4 +68,20 @@
 
 .input-group {
   justify-content: center;
+}
+
+.home-banner-heading {
+  text-align: center;
+  padding-top: 247px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+  font-size: 71px;
+}
+
+.home-banner-text {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-weight: bold;
 }
