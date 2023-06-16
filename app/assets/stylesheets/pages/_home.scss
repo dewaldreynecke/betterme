@@ -1,1 +1,70 @@
 // Specific CSS for your home-page
+
+.home-banner {
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-shadow: 1.5px 1px black;
+  object-fit: scale-down;
+}
+
+.home-container {
+  border-radius: 20px;
+  box-shadow: 0px 2px 20px grey;
+  background-color: white;
+  padding: 40px;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 70px;
+}
+
+.home-p {
+  padding: 0 100px;
+  line-height: 200%;
+}
+
+.home-heading {
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.home-feature-box {
+  margin: 20px 0 60px 0;
+}
+
+.testimonial-box {
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid black;
+  height: 248px;
+}
+
+.testimonial-heading {
+  margin-bottom: 22px;
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+
+.testimonial-author {
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+.signup-heading {
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+
+.signup-p {
+  padding: 0 100px;
+  line-height: 200%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.input-group {
+  justify-content: center;
+}
