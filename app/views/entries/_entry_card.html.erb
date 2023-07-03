@@ -1,15 +1,15 @@
 <div class="col-lg-6 h-100 mt-4">
   <div class="ec-card d-flex flex-column">
-    <% if photos.empty? %>
+    <% if entry.photos.empty? %>
       <img class="ec-photo" src="https://res.cloudinary.com/dsi0ucqtn/image/upload/v1686319692/production/mxjxtih0815dh36gtmiptblpkz8d.jpg" alt="default placeholder image">
     <% else %>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <%= cl_image_tag photos.first.key, class: "ec-photo d-block w-100" %>
+            <%= cl_image_tag entry.photos.first.key, class: "ec-photo d-block w-100" %>
           </div>
-          <% photos.each do |photo| %>
-            <% next if photo == photos.first %>
+          <% entry.photos.each do |photo| %>
+            <% next if photo == entry.photos.first %>
             <div class="carousel-item">
               <%= cl_image_tag photo.key, class: "ec-photo d-block w-100" %>
             </div>
@@ -18,20 +18,20 @@
       </div>
     <% end %>
     <div class="ec-body">
-      <h3 class="ec-title"><%= title %></h3>
-      <p class="ec-details-text"><%= date.strftime("%e %B %Y") %></p>
-      <% unless address.empty? %>
-        <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= address %></p>
+      <h3 class="ec-title"><%= entry.title %></h3>
+      <p class="ec-details-text"><%= entry.date.strftime("%e %B %Y") %></p>
+      <% unless entry.address.empty? %>
+        <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= entry.address %></p>
       <% end %>
-      <% unless tags.empty? %>
+      <% unless entry.tags.empty? %>
         <div class="show-tag-box">
-          <% tags.each do |tag| %>
+          <% entry.tags.each do |tag| %>
             <%= link_to tag.name, tag_path(tag), class: "tag-small" %>
           <% end %>
         </div>
       <% end %>
       <hr class="ec-hr">
-      <p><%= content %></p>
+      <p><%= entry.content %></p>
     </div>
   </div>
 </div>
