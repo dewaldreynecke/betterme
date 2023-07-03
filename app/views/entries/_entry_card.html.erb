@@ -21,7 +21,7 @@
       <h3 class="ec-title"><%= entry.title %></h3>
       <p class="ec-details-text"><%= entry.date.strftime("%e %B %Y") %></p>
       <% unless entry.address.empty? %>
-        <p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= entry.address %></p>
+        <a href="/location?lat=<%= "#{entry.latitude}&lng=#{entry.longitude}" %>"><p class="ec-details-text"><i class="fa-solid fa-location-dot"></i> <%= entry.address %></p></a>
       <% end %>
       <% unless entry.tags.empty? %>
         <div class="show-tag-box">
