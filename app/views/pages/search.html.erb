@@ -2,7 +2,7 @@
   <div id="entries" class="row mt-5">
   <h1>Search results:</h1>
     <% @results.each do |entry| %>
-      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos, tags: entry.tags } %>
+      <%= render partial: "entries/entry_card", locals: { entry: entry } %>
     <% end %>
   </div>
 </div>
