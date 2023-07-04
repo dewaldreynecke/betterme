@@ -64,11 +64,11 @@ class PagesController < ApplicationController
     # mood should be class name
     # example output {1: "cal-m-okay",2: "",3: "cal-m-awesome"}
     return_hash = {}
-    (1..30).to_a.each do |day|
-      date = Date.new(2023, 6, day)
+    (1..31).to_a.each do |day|
+      date = Date.new(2023, 7, day)
       mood = Mood.where(date:)
       return_hash[:"#{day}-mood"] = mood.empty? ? "" : "cal-m-#{mood.first.mood}"
-      return_hash[:"#{day}-date"] = "2023-06-#{day}"
+      return_hash[:"#{day}-date"] = "2023-07-#{day}"
     end
     return return_hash
   end
