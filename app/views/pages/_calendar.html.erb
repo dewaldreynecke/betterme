@@ -1,6 +1,6 @@
 <div id="calendar-dashboard" data-controller="calendar">
   <div class="calendar card">
-    <h2 class="text-center">June 2023</h2>
+    <h2 class="text-center">July 2023</h2>
     <hr>
     <div class="days">
       <div class="day">S</div>
@@ -12,6 +12,8 @@
       <div class="day">S</div>
     </div>
     <div class="dates">
+      <div class="date"></div>
+      <div class="date"></div>
       <div class="date"></div>
       <div class="date"></div>
       <div class="date"></div>
@@ -46,6 +48,7 @@
       <div class="date <%= @cal_moods[:"28-mood"] %>" id="28"><%= link_to "28", entries_by_date_path(@cal_moods[:"28-date"]), class: "day-link" %></div>
       <div class="date <%= @cal_moods[:"29-mood"] %>" id="29"><%= link_to "29", entries_by_date_path(@cal_moods[:"29-date"]), class: "day-link" %></div>
       <div class="date <%= @cal_moods[:"30-mood"] %>" id="30"><%= link_to "30", entries_by_date_path(@cal_moods[:"30-date"]), class: "day-link" %></div>
+      <div class="date <%= @cal_moods[:"31-mood"] %>" id="31"><%= link_to "31", entries_by_date_path(@cal_moods[:"31-date"]), class: "day-link" %></div>
     </div>
   </div>
 </div>

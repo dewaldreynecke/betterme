@@ -10,7 +10,7 @@
   <h2><%= pluralize(@tag.entries.count, 'entry') %> for tag "<%= @tag.name %>"</h2>
   <div class="row">
     <% @tag.entries.each do |entry| %>
-      <%= render partial: "entries/entry_card", locals: { title: entry.title, date: entry.date, address: entry.address ,content: entry.content, photos: entry.photos, tags: entry.tags } %>
+      <%= render partial: "entries/entry_card", locals: { entry: entry } %>
     <% end %>
   </div>
 </div>
